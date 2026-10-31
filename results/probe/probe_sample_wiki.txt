@@ -1,0 +1,18 @@
+keys 90437011
+PROGRESS sample 32/512
+PROGRESS sample 64/512
+PROGRESS sample 96/512
+PROGRESS sample 128/512
+PROGRESS sample 160/512
+PROGRESS sample 192/512
+PROGRESS sample 224/512
+PROGRESS sample 256/512
+PROGRESS sample 288/512
+PROGRESS sample 320/512
+PROGRESS sample 352/512
+PROGRESS sample 384/512
+PROGRESS sample 416/512
+PROGRESS sample 448/512
+PROGRESS sample 480/512
+PROGRESS sample 512/512
+SAMPLE n 512 start_key_changed 252 mean_us_changed 1063.34 mean_us_same 364.999 tails 1 mean_us 708.711 faults 50113 major 0 mean_move_us 2.56963 mean_merge_us 0.144295 mean_prefix_us 95.0571 mean_refit_us 609.196

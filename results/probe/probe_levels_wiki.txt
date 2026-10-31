@@ -1,0 +1,6 @@
+keys 90437011
+PGM bytes 753576 height 4 sizeof_segment 16 all_segments 47096 level0 46818 level1 269 level2 4 level3 1
+SHI M 0 bytes 845872 levels 52473 388 5 1
+SHI M 1024 bytes 4755968 levels 119803 88723 88722
+SHI M 4096 bytes 1785584 levels 67065 22273 22261
+SHI M 16384 bytes 1069808 levels 55822 5552 5489

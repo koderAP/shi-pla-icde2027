@@ -1,0 +1,17 @@
+host: dell-R760, Intel Xeon Gold 6430, 64 threads, GCC 13.3.0 -O3, shared machine
+file: wiki_ts_200M_uint64 (Zenodo 15240501)
+binary: Idea_DB/build/bench_e2e
+
+=== prefix --n 10000000 --deletes 12 ===
+keys 8842742 unique_span 127488514
+shi_segments 19634 shi_levels 3 shi_model_bytes 384240 pgm_segments 16530 pgm_model_bytes 266344
+shi_build_ms 516.13 pgm_build_ms 276.551 lookup_misses 0 lookup_audited 8842742
+deletes 12 byte_identical 12 refit_mean 3.16667 refit_max 7 e2e_delete_us 4213.62 model_only_us 1144.04 rebuild_us 339785 e2e_speedup 80.6397
+pgm_dynamic_probes 12 pgm_tombstones_found 12 pgm_bytes_per_delete 16
+
+=== full file --deletes 8 ===
+keys 90437011 unique_span 236568323
+shi_segments 67065 shi_levels 3 shi_model_bytes 1785584 pgm_segments 46818 pgm_model_bytes 753576
+shi_build_ms 3985 pgm_build_ms 2296.03 lookup_misses 0 lookup_audited 90437011
+deletes 8 byte_identical 8 refit_mean 2.5 refit_max 3 e2e_delete_us 36362.2 model_only_us 4640.45 rebuild_us 3.00727e+06 e2e_speedup 82.7033
+pgm_dynamic_probes 8 pgm_tombstones_found 8 pgm_bytes_per_delete 16

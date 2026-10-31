@@ -1,0 +1,585 @@
+COMPILE_OK
+Mon Oct 26 10:49:47 AM UTC 2026
+keys 90437011
+built_ms 3980.44 segments 67065 max_piece 36844
+QUANTILE rank 0 frac 0 e2e_us 1152.8 refit 3
+QUANTILE rank 904370 frac 0.01 e2e_us 255.764 refit 2
+QUANTILE rank 9043701 frac 0.1 e2e_us 782.862 refit 3
+QUANTILE rank 22609252 frac 0.25 e2e_us 286.64 refit 2
+QUANTILE rank 45218505 frac 0.5 e2e_us 904.604 refit 3
+QUANTILE rank 67827757 frac 0.75 e2e_us 447.047 refit 2
+QUANTILE rank 81393309 frac 0.9 e2e_us 908.183 refit 4
+QUANTILE rank 89532639 frac 0.99 e2e_us 405.873 refit 2
+QUANTILE rank 90437010 frac 1 e2e_us 255.512 refit 2
+PROGRESS random 8 last_rank 35073842 last_us 304.462 last_refit 2
+PROGRESS random 32 last_rank 51393144 last_us 336.726 last_refit 2
+PROGRESS random 64 last_rank 30373236 last_us 992.188 last_refit 4
+PROGRESS random 128 last_rank 14983297 last_us 300.258 last_refit 2
+PROGRESS random 192 last_rank 82988317 last_us 1197.96 last_refit 4
+PROGRESS random 256 last_rank 35810175 last_us 843.8 last_refit 3
+PROGRESS random 320 last_rank 62717612 last_us 312.275 last_refit 2
+PROGRESS random 384 last_rank 26009595 last_us 976.292 last_refit 4
+PROGRESS random 448 last_rank 81296397 last_us 352.182 last_refit 2
+PROGRESS random 512 last_rank 61590943 last_us 985.25 last_refit 3
+STATS random n 8 mean_us 601.504 stdev_us 292.064 min_us 266.447 p50_us 573.397 p90_us 945.642 p99_us 1019.29 max_us 1027.47 refit_mean 2.625 refit_max 4
+STATS random n 32 mean_us 657.371 stdev_us 480.387 min_us 258.171 p50_us 408.369 p90_us 1020.67 p99_us 2284.83 max_us 2587.05 refit_mean 2.5625 refit_max 4
+STATS random n 128 mean_us 685.142 stdev_us 381.316 min_us 240.393 p50_us 802.249 p90_us 1054.79 p99_us 1716.29 max_us 2587.05 refit_mean 2.76562 refit_max 6
+STATS random n 512 mean_us 666.806 stdev_us 395.743 min_us 240.393 p50_us 526.525 p90_us 1019.75 p99_us 2458.25 max_us 2828.78 refit_mean 2.69922 refit_max 9
+STATS inner90 n 459 mean_us 670.378 stdev_us 397.736 min_us 247.717 p50_us 534.936 p90_us 1015.94 p99_us 2488.18 max_us 2828.78 refit_mean 2.6841 refit_max 9
+CHECKS n 8 matched 8 refit_mean 2.625 refit_max 4
+DIST_EXIT 0
+WIKI_DIST_DONE
+keys 90437011
+built_ms 4247.28 segments 67065 max_piece 36844
+QUANTILE rank 0 frac 0 e2e_us 1178.9 refit 3
+QUANTILE rank 904370 frac 0.01 e2e_us 254.127 refit 2
+QUANTILE rank 9043701 frac 0.1 e2e_us 797.905 refit 3
+QUANTILE rank 22609252 frac 0.25 e2e_us 294.307 refit 2
+QUANTILE rank 45218505 frac 0.5 e2e_us 907.061 refit 3
+QUANTILE rank 67827757 frac 0.75 e2e_us 440.959 refit 2
+QUANTILE rank 81393309 frac 0.9 e2e_us 909.055 refit 4
+QUANTILE rank 89532639 frac 0.99 e2e_us 406.078 refit 2
+QUANTILE rank 90437010 frac 1 e2e_us 263.466 refit 2
+PROGRESS random 8 last_rank 35073842 last_us 307.426 last_refit 2
+PROGRESS random 32 last_rank 51393144 last_us 334.748 last_refit 2
+PROGRESS random 64 last_rank 30373236 last_us 987.533 last_refit 4
+PROGRESS random 128 last_rank 14983297 last_us 299.831 last_refit 2
+PROGRESS random 192 last_rank 82988317 last_us 1203.33 last_refit 4
+PROGRESS random 256 last_rank 35810175 last_us 856.98 last_refit 3
+PROGRESS random 320 last_rank 62717612 last_us 314.428 last_refit 2
+PROGRESS random 384 last_rank 26009595 last_us 971.713 last_refit 4
+PROGRESS random 448 last_rank 81296397 last_us 347.704 last_refit 2
+PROGRESS random 512 last_rank 61590943 last_us 981.703 last_refit 3
+STATS random n 8 mean_us 601.777 stdev_us 293.33 min_us 264.05 p50_us 574.086 p90_us 945.443 p99_us 1025.07 max_us 1033.91 refit_mean 2.625 refit_max 4
+STATS random n 32 mean_us 660.404 stdev_us 484.134 min_us 260.911 p50_us 410.928 p90_us 1027.41 p99_us 2305.19 max_us 2615.92 refit_mean 2.5625 refit_max 4
+STATS random n 128 mean_us 685.73 stdev_us 383.149 min_us 245.443 p50_us 802.598 p90_us 1056.59 p99_us 1718.58 max_us 2615.92 refit_mean 2.76562 refit_max 6
+STATS random n 512 mean_us 666.733 stdev_us 396.592 min_us 240.761 p50_us 527.256 p90_us 1021.38 p99_us 2457.87 max_us 2831.1 refit_mean 2.69922 refit_max 9
+STATS inner90 n 459 mean_us 670.408 stdev_us 399.033 min_us 244.858 p50_us 539.074 p90_us 1015.91 p99_us 2490.6 max_us 2831.1 refit_mean 2.6841 refit_max 9
+DIST_EXIT 0
+WIKI_DIST_REPEAT
+keys 200000000
+built_ms 27684.6 segments 2255847 max_piece 62287
+QUANTILE rank 0 frac 0 e2e_us 2887.74 refit 1
+QUANTILE rank 1999999 frac 0.01 e2e_us 352.452 refit 2
+QUANTILE rank 19999999 frac 0.1 e2e_us 362.818 refit 2
+QUANTILE rank 49999999 frac 0.25 e2e_us 359.065 refit 2
+QUANTILE rank 99999999 frac 0.5 e2e_us 2327.17 refit 3
+QUANTILE rank 149999999 frac 0.75 e2e_us 356.017 refit 2
+QUANTILE rank 179999999 frac 0.9 e2e_us 2324.67 refit 3
+QUANTILE rank 197999999 frac 0.99 e2e_us 351.641 refit 2
+QUANTILE rank 199999999 frac 1 e2e_us 232.198 refit 2
+PROGRESS random 8 last_rank 77565239 last_us 2326.11 last_refit 3
+SLOW rank 97051390 us 58433.8 refit 8 scanned 727 piece 11429
+PROGRESS random 32 last_rank 113655115 last_us 2353.2 last_refit 4
+SLOW rank 24021871 us 31875.6 refit 4 scanned 370 piece 3990
+PROGRESS random 64 last_rank 67169925 last_us 354.676 last_refit 2
+SLOW rank 33135321 us 60726.8 refit 7 scanned 619 piece 5863
+PROGRESS random 128 last_rank 33135321 last_us 60726.8 last_refit 7
+SLOW rank 86736661 us 31188 refit 4 scanned 364 piece 14936
+PROGRESS random 192 last_rank 183527334 last_us 351.68 last_refit 2
+PROGRESS random 256 last_rank 79193628 last_us 2333.68 last_refit 3
+PROGRESS random 320 last_rank 138698994 last_us 353.675 last_refit 2
+SLOW rank 110728618 us 58480.4 refit 4 scanned 340 piece 3063
+SLOW rank 166664449 us 28645.7 refit 5 scanned 484 piece 3975
+SLOW rank 49917845 us 32001.3 refit 2 scanned 146 piece 3682
+PROGRESS random 384 last_rank 57519803 last_us 2393.85 last_refit 5
+SLOW rank 179785680 us 58633.5 refit 6 scanned 430 piece 13496
+PROGRESS random 448 last_rank 179785680 last_us 58633.5 last_refit 6
+SLOW rank 174604817 us 29843.1 refit 5 scanned 514 piece 11858
+SLOW rank 59010354 us 31538.8 refit 4 scanned 477 piece 13297
+SLOW rank 136207384 us 30271 refit 7 scanned 585 piece 33479
+PROGRESS random 512 last_rank 136207384 last_us 30271 last_refit 7
+STATS random n 8 mean_us 1908.51 stdev_us 910.209 min_us 353.183 p50_us 2324.97 p90_us 2556.76 p99_us 2788.34 max_us 2814.07 refit_mean 3.5 refit_max 7
+STATS random n 32 mean_us 3183.59 stdev_us 9973.35 min_us 351.651 p50_us 2321.58 p90_us 2424.68 p99_us 41191.7 max_us 58433.8 refit_mean 3.125 refit_max 8
+STATS random n 128 mean_us 2534.01 stdev_us 7737.84 min_us 350.014 p50_us 2314.69 p90_us 2399.76 p99_us 51263.1 max_us 60726.8 refit_mean 2.82812 refit_max 8
+STATS random n 512 mean_us 2197.37 stdev_us 6177.94 min_us 347.916 p50_us 1331.95 p90_us 2395.76 p99_us 31838.6 max_us 60726.8 refit_mean 2.77148 refit_max 8
+STATS inner90 n 459 mean_us 2315 stdev_us 6506.21 min_us 347.916 p50_us 2309.79 p90_us 2402.89 p99_us 31928.4 max_us 60726.8 refit_mean 2.80174 refit_max 8
+CHECKS n 8 matched 8 refit_mean 2.75 refit_max 3
+DIST_EXIT 0
+FB_DIST_DONE
+keys 199999999
+built_ms 14673.7 segments 837007 max_piece 49096
+QUANTILE rank 0 frac 0 e2e_us 1948.16 refit 1
+QUANTILE rank 1999999 frac 0.01 e2e_us 1519.7 refit 3
+QUANTILE rank 19999999 frac 0.1 e2e_us 386.016 refit 2
+QUANTILE rank 49999999 frac 0.25 e2e_us 377.492 refit 2
+QUANTILE rank 99999999 frac 0.5 e2e_us 371.767 refit 2
+QUANTILE rank 149999998 frac 0.75 e2e_us 361.737 refit 2
+QUANTILE rank 179999998 frac 0.9 e2e_us 354.625 refit 2
+QUANTILE rank 197999998 frac 0.99 e2e_us 1499.96 refit 3
+QUANTILE rank 199999998 frac 1 e2e_us 228.946 refit 2
+PROGRESS random 8 last_rank 77565239 last_us 376.66 last_refit 2
+PROGRESS random 32 last_rank 113655114 last_us 361.727 last_refit 2
+PROGRESS random 64 last_rank 67169925 last_us 363.983 last_refit 2
+PROGRESS random 128 last_rank 33135321 last_us 394.449 last_refit 2
+PROGRESS random 192 last_rank 183527333 last_us 346.405 last_refit 2
+PROGRESS random 256 last_rank 79193628 last_us 362.042 last_refit 2
+PROGRESS random 320 last_rank 138698993 last_us 1358.49 last_refit 3
+PROGRESS random 384 last_rank 57519803 last_us 382.005 last_refit 2
+PROGRESS random 448 last_rank 179785679 last_us 1352.93 last_refit 3
+PROGRESS random 512 last_rank 136207383 last_us 355.245 last_refit 2
+STATS random n 8 mean_us 817.419 stdev_us 577.25 min_us 356.803 p50_us 379.654 p90_us 1569.66 p99_us 1637.44 max_us 1644.97 refit_mean 2.625 refit_max 5
+STATS random n 32 mean_us 1491.97 stdev_us 3182.82 min_us 343.657 p50_us 1349.22 p90_us 1597.77 p99_us 13584.1 max_us 18948.1 refit_mean 3.09375 refit_max 10
+STATS random n 128 mean_us 1371.68 stdev_us 2930.77 min_us 339.573 p50_us 402.135 p90_us 1506.61 p99_us 18870.3 max_us 18948.1 refit_mean 3.07812 refit_max 10
+STATS random n 512 mean_us 1465.11 stdev_us 2753.38 min_us 335.108 p50_us 1355.05 p90_us 1508.88 p99_us 18748 max_us 18948.1 refit_mean 3.08008 refit_max 14
+STATS inner90 n 459 mean_us 1510.77 stdev_us 2864.92 min_us 336.863 p50_us 1356.2 p90_us 1509.21 p99_us 18781.5 max_us 18948.1 refit_mean 3.09368 refit_max 14
+CHECKS n 8 matched 8 refit_mean 3.625 refit_max 9
+DIST_EXIT 0
+BOOKS_DIST_DONE
+keys 800000000
+built_ms 101078 segments 6690022 max_piece 43825
+QUANTILE rank 0 frac 0 e2e_us 11616 refit 1
+QUANTILE rank 7999999 frac 0.01 e2e_us 8084.34 refit 3
+QUANTILE rank 79999999 frac 0.1 e2e_us 1063.13 refit 2
+QUANTILE rank 199999999 frac 0.25 e2e_us 1058.25 refit 2
+QUANTILE rank 399999999 frac 0.5 e2e_us 8135.91 refit 5
+SLOW rank 599999999 us 205331 refit 4 scanned 692 piece 2303
+QUANTILE rank 599999999 frac 0.75 e2e_us 205331 refit 4
+QUANTILE rank 719999999 frac 0.9 e2e_us 1060.27 refit 2
+QUANTILE rank 791999999 frac 0.99 e2e_us 1046.28 refit 2
+QUANTILE rank 799999999 frac 1 e2e_us 925.972 refit 2
+PROGRESS random 8 last_rank 310260957 last_us 9157.99 last_refit 4
+PROGRESS random 32 last_rank 454620461 last_us 8047.75 last_refit 3
+SLOW rank 2713389 us 100332 refit 4 scanned 699 piece 6956
+PROGRESS random 64 last_rank 268679701 last_us 8355.85 last_refit 3
+SLOW rank 572217689 us 89463.1 refit 3 scanned 646 piece 4611
+SLOW rank 755389680 us 185213 refit 11 scanned 2937 piece 10860
+SLOW rank 610710926 us 89287.5 refit 8 scanned 494 piece 9058
+SLOW rank 132541287 us 99196 refit 14 scanned 1014 piece 4471
+PROGRESS random 128 last_rank 132541287 last_us 99196 last_refit 14
+SLOW rank 244929093 us 95697.4 refit 11 scanned 1480 piece 9053
+PROGRESS random 192 last_rank 734109337 last_us 8082.06 last_refit 4
+PROGRESS random 256 last_rank 316774514 last_us 1065.66 last_refit 2
+SLOW rank 704684694 us 88856.5 refit 4 scanned 409 piece 7059
+SLOW rank 790463296 us 86694.1 refit 4 scanned 483 piece 4748
+SLOW rank 157767758 us 103595 refit 5 scanned 542 piece 7405
+SLOW rank 620553322 us 92608.2 refit 4 scanned 363 piece 5190
+PROGRESS random 320 last_rank 554795976 last_us 1061.82 last_refit 2
+SLOW rank 397007153 us 90263.7 refit 10 scanned 1682 piece 10422
+SLOW rank 153959505 us 183102 refit 10 scanned 630 piece 4571
+PROGRESS random 384 last_rank 230079215 last_us 1041.54 last_refit 2
+SLOW rank 378744589 us 96379.1 refit 4 scanned 616 piece 4177
+PROGRESS random 448 last_rank 719142721 last_us 8069.01 last_refit 3
+SLOW rank 73807561 us 185396 refit 8 scanned 966 piece 9673
+SLOW rank 60876510 us 98556.8 refit 4 scanned 585 piece 4936
+PROGRESS random 512 last_rank 544829537 last_us 1047.04 last_refit 2
+STATS random n 8 mean_us 6663.34 stdev_us 3280.15 min_us 1063.96 p50_us 8069.93 p90_us 9316.48 p99_us 9649.31 max_us 9686.29 refit_mean 3.125 refit_max 5
+STATS random n 32 mean_us 5325.58 stdev_us 3544.48 min_us 1043.08 p50_us 8054.4 p90_us 8206.51 p99_us 9522.52 max_us 9686.29 refit_mean 3.125 refit_max 8
+STATS random n 128 mean_us 9175.67 stdev_us 22355.3 min_us 1040.2 p50_us 8053.33 p90_us 8136.56 p99_us 100025 max_us 185213 refit_mean 3.03125 refit_max 14
+STATS random n 512 mean_us 7611.58 stdev_us 19540.3 min_us 1032.83 p50_us 1140.64 p90_us 8111.37 p99_us 99125.7 max_us 185396 refit_mean 2.83008 refit_max 14
+STATS inner90 n 459 mean_us 7660.51 stdev_us 19764.6 min_us 1033.84 p50_us 8037.43 p90_us 8114.33 p99_us 98825.3 max_us 185396 refit_mean 2.86492 refit_max 14
+CHECKS n 8 matched 8 refit_mean 3 refit_max 6
+DIST_EXIT 0
+OSM_DIST_DONE
+keys 90437011
+STREAM done 10000 mean_us 1959.11 tails 3 uncleared 0 boundaries 32 wall_s 19.6198
+STREAM done 20000 mean_us 2184.98 tails 5 uncleared 0 boundaries 32 wall_s 43.7575
+STREAM done 30000 mean_us 2434.89 tails 6 uncleared 0 boundaries 32 wall_s 73.1339
+STREAM done 40000 mean_us 2646.98 tails 8 uncleared 0 boundaries 32 wall_s 105.996
+STREAM done 50000 mean_us 3021.59 tails 8 uncleared 0 boundaries 32 wall_s 151.227
+STREAM done 60000 mean_us 3582.59 tails 10 uncleared 0 boundaries 42 wall_s 215.134
+STREAM done 70000 mean_us 3931.74 tails 10 uncleared 0 boundaries 48 wall_s 275.432
+STREAM done 80000 mean_us 4174.03 tails 12 uncleared 0 boundaries 48 wall_s 334.164
+STREAM done 90000 mean_us 4362.06 tails 14 uncleared 0 boundaries 50 wall_s 392.858
+STREAM done 100000 mean_us 4512.78 tails 16 uncleared 0 boundaries 50 wall_s 451.582
+STREAM done 110000 mean_us 4633.21 tails 18 uncleared 0 boundaries 54 wall_s 509.988
+STREAM done 120000 mean_us 4732.37 tails 18 uncleared 0 boundaries 56 wall_s 568.25
+STREAM done 130000 mean_us 4811.81 tails 20 uncleared 0 boundaries 62 wall_s 625.933
+STREAM done 140000 mean_us 4879.29 tails 20 uncleared 0 boundaries 66 wall_s 683.529
+STREAM done 150000 mean_us 4935.17 tails 27 uncleared 0 boundaries 66 wall_s 740.735
+STREAM done 160000 mean_us 4980.17 tails 31 uncleared 0 boundaries 74 wall_s 797.316
+STREAM done 170000 mean_us 5013.08 tails 33 uncleared 0 boundaries 78 wall_s 852.744
+STREAM done 180000 mean_us 5041.77 tails 38 uncleared 0 boundaries 78 wall_s 908.069
+STREAM done 190000 mean_us 5065.61 tails 41 uncleared 0 boundaries 84 wall_s 963.047
+STREAM done 200000 mean_us 5085.15 tails 43 uncleared 0 boundaries 90 wall_s 1017.64
+STREAM done 210000 mean_us 5097.42 tails 46 uncleared 0 boundaries 98 wall_s 1071.1
+STREAM done 220000 mean_us 5107.43 tails 48 uncleared 0 boundaries 108 wall_s 1124.31
+STREAM done 230000 mean_us 5115.27 tails 51 uncleared 0 boundaries 114 wall_s 1177.22
+STREAM done 240000 mean_us 5111.77 tails 52 uncleared 0 boundaries 120 wall_s 1227.56
+STREAM done 250000 mean_us 5105.24 tails 54 uncleared 0 boundaries 124 wall_s 1277.07
+STREAM done 260000 mean_us 5099.19 tails 58 uncleared 0 boundaries 128 wall_s 1326.58
+STREAM done 270000 mean_us 5092.97 tails 58 uncleared 0 boundaries 130 wall_s 1375.93
+STREAM done 280000 mean_us 5087.33 tails 59 uncleared 0 boundaries 132 wall_s 1425.31
+STREAM done 290000 mean_us 5081.26 tails 61 uncleared 0 boundaries 136 wall_s 1474.45
+STREAM done 300000 mean_us 5074.04 tails 64 uncleared 0 boundaries 140 wall_s 1523.13
+STREAM done 310000 mean_us 5066.43 tails 68 uncleared 0 boundaries 146 wall_s 1571.54
+STREAM done 320000 mean_us 5058.57 tails 71 uncleared 0 boundaries 146 wall_s 1619.72
+STREAM done 330000 mean_us 5050.38 tails 73 uncleared 0 boundaries 148 wall_s 1667.64
+STREAM done 340000 mean_us 5041.22 tails 80 uncleared 0 boundaries 152 wall_s 1715.06
+STREAM done 350000 mean_us 5031.13 tails 83 uncleared 0 boundaries 160 wall_s 1761.97
+STREAM done 360000 mean_us 5021.44 tails 86 uncleared 0 boundaries 160 wall_s 1808.82
+STREAM done 370000 mean_us 5012.25 tails 88 uncleared 0 boundaries 160 wall_s 1855.67
+STREAM done 380000 mean_us 5003.65 tails 89 uncleared 0 boundaries 164 wall_s 1902.55
+STREAM done 390000 mean_us 4994.77 tails 91 uncleared 0 boundaries 168 wall_s 1949.15
+STREAM done 400000 mean_us 4985.48 tails 94 uncleared 0 boundaries 170 wall_s 1995.42
+STREAM done 410000 mean_us 4977.09 tails 96 uncleared 0 boundaries 176 wall_s 2041.86
+STREAM done 420000 mean_us 4968.52 tails 100 uncleared 0 boundaries 182 wall_s 2088.07
+STREAM done 430000 mean_us 4960.3 tails 101 uncleared 0 boundaries 184 wall_s 2134.25
+STREAM done 440000 mean_us 4951.28 tails 104 uncleared 0 boundaries 194 wall_s 2179.91
+STREAM done 450000 mean_us 4942.04 tails 106 uncleared 0 boundaries 198 wall_s 2225.3
+STREAM done 460000 mean_us 4931.75 tails 108 uncleared 0 boundaries 204 wall_s 2270.02
+STREAM done 470000 mean_us 4921.57 tails 112 uncleared 0 boundaries 206 wall_s 2314.58
+STREAM done 480000 mean_us 4911.78 tails 113 uncleared 0 boundaries 212 wall_s 2359.13
+STREAM done 490000 mean_us 4902.43 tails 117 uncleared 0 boundaries 212 wall_s 2403.7
+STREAM done 500000 mean_us 4893.28 tails 118 uncleared 0 boundaries 214 wall_s 2448.18
+STREAM done 510000 mean_us 4883.8 tails 121 uncleared 0 boundaries 220 wall_s 2492.31
+STREAM done 520000 mean_us 4874.27 tails 124 uncleared 0 boundaries 228 wall_s 2536.22
+STREAM done 530000 mean_us 4865.08 tails 128 uncleared 0 boundaries 228 wall_s 2580.12
+STREAM done 540000 mean_us 4855.49 tails 132 uncleared 0 boundaries 238 wall_s 2623.63
+STREAM done 550000 mean_us 4845.8 tails 132 uncleared 0 boundaries 244 wall_s 2666.89
+STREAM done 560000 mean_us 4835.8 tails 136 uncleared 0 boundaries 250 wall_s 2709.78
+STREAM done 570000 mean_us 4826.11 tails 139 uncleared 0 boundaries 254 wall_s 2752.64
+STREAM done 580000 mean_us 4816.14 tails 143 uncleared 0 boundaries 258 wall_s 2795.15
+STREAM done 590000 mean_us 4805.73 tails 144 uncleared 0 boundaries 264 wall_s 2837.2
+STREAM done 600000 mean_us 4795.99 tails 146 uncleared 0 boundaries 268 wall_s 2879.44
+STREAM done 610000 mean_us 4786.38 tails 148 uncleared 0 boundaries 274 wall_s 2921.57
+STREAM done 620000 mean_us 4776.54 tails 152 uncleared 0 boundaries 278 wall_s 2963.37
+STREAM done 630000 mean_us 4766.41 tails 156 uncleared 0 boundaries 278 wall_s 3004.78
+STREAM done 640000 mean_us 4756.49 tails 159 uncleared 0 boundaries 286 wall_s 3046.13
+STREAM done 650000 mean_us 4746.77 tails 160 uncleared 0 boundaries 296 wall_s 3087.41
+STREAM done 660000 mean_us 4736.52 tails 166 uncleared 0 boundaries 298 wall_s 3128.14
+STREAM done 670000 mean_us 4726.89 tails 169 uncleared 0 boundaries 304 wall_s 3169.08
+STREAM done 680000 mean_us 4717.83 tails 171 uncleared 0 boundaries 306 wall_s 3210.22
+STREAM done 690000 mean_us 4708.42 tails 171 uncleared 0 boundaries 312 wall_s 3250.94
+STREAM done 700000 mean_us 4699.02 tails 175 uncleared 0 boundaries 320 wall_s 3291.48
+STREAM done 710000 mean_us 4689.73 tails 178 uncleared 0 boundaries 332 wall_s 3331.9
+STREAM done 720000 mean_us 4680.36 tails 182 uncleared 0 boundaries 344 wall_s 3372.08
+STREAM done 730000 mean_us 4670.54 tails 182 uncleared 0 boundaries 348 wall_s 3411.74
+STREAM done 740000 mean_us 4661.07 tails 189 uncleared 0 boundaries 354 wall_s 3451.47
+STREAM done 750000 mean_us 4651.59 tails 192 uncleared 0 boundaries 362 wall_s 3491
+STREAM done 760000 mean_us 4641.98 tails 193 uncleared 0 boundaries 370 wall_s 3530.24
+STREAM done 770000 mean_us 4632.4 tails 196 uncleared 0 boundaries 374 wall_s 3569.32
+STREAM done 780000 mean_us 4623.03 tails 200 uncleared 0 boundaries 380 wall_s 3608.36
+STREAM done 790000 mean_us 4613.9 tails 204 uncleared 0 boundaries 384 wall_s 3647.41
+STREAM done 800000 mean_us 4604.86 tails 205 uncleared 0 boundaries 388 wall_s 3686.34
+STREAM done 810000 mean_us 4595.97 tails 211 uncleared 0 boundaries 390 wall_s 3725.23
+STREAM done 820000 mean_us 4587.19 tails 216 uncleared 0 boundaries 396 wall_s 3764.02
+STREAM done 830000 mean_us 4578.71 tails 219 uncleared 0 boundaries 400 wall_s 3802.88
+STREAM done 840000 mean_us 4570.24 tails 219 uncleared 0 boundaries 406 wall_s 3841.58
+STREAM done 850000 mean_us 4561.52 tails 223 uncleared 0 boundaries 415 wall_s 3879.9
+STREAM done 860000 mean_us 4552.72 tails 226 uncleared 0 boundaries 415 wall_s 3917.98
+STREAM done 870000 mean_us 4544.33 tails 229 uncleared 0 boundaries 419 wall_s 3956.23
+STREAM done 880000 mean_us 4535.91 tails 231 uncleared 0 boundaries 423 wall_s 3994.3
+STREAM done 890000 mean_us 4527.6 tails 236 uncleared 0 boundaries 433 wall_s 4032.29
+STREAM done 900000 mean_us 4519.3 tails 240 uncleared 0 boundaries 437 wall_s 4070.12
+STREAM done 910000 mean_us 4511.36 tails 243 uncleared 0 boundaries 441 wall_s 4108.12
+STREAM done 920000 mean_us 4503.22 tails 245 uncleared 0 boundaries 441 wall_s 4145.78
+STREAM done 930000 mean_us 4495.44 tails 248 uncleared 0 boundaries 443 wall_s 4183.6
+STREAM done 940000 mean_us 4487.81 tails 249 uncleared 0 boundaries 447 wall_s 4221.42
+STREAM done 950000 mean_us 4480.03 tails 250 uncleared 0 boundaries 455 wall_s 4258.94
+STREAM done 960000 mean_us 4472.18 tails 252 uncleared 0 boundaries 463 wall_s 4296.23
+STREAM done 970000 mean_us 4464.3 tails 260 uncleared 0 boundaries 471 wall_s 4333.34
+STREAM done 980000 mean_us 4456.62 tails 261 uncleared 0 boundaries 475 wall_s 4370.49
+STREAM done 990000 mean_us 4448.74 tails 263 uncleared 0 boundaries 479 wall_s 4407.28
+STREAM done 1000000 mean_us 4440.98 tails 264 uncleared 0 boundaries 479 wall_s 4444.05
+STREAM_DONE n 1000000 mean_us 4440.98 tails 264 uncleared 0 boundaries 479 slides 984275 byte_match 1 lookup_ns 511.109 lookup_miss 0 audit_miss 0 audited 89437011
+WIKI_STREAM_DONE
+keys 200000000
+STREAM done 10000 mean_us 4783.8 tails 3 uncleared 0 boundaries 32 wall_s 47.8731
+STREAM done 20000 mean_us 5372.4 tails 6 uncleared 0 boundaries 32 wall_s 107.519
+STREAM done 30000 mean_us 5918.84 tails 10 uncleared 0 boundaries 32 wall_s 177.672
+STREAM done 40000 mean_us 6567.63 tails 13 uncleared 0 boundaries 32 wall_s 262.847
+STREAM done 50000 mean_us 8264.11 tails 14 uncleared 0 boundaries 38 wall_s 413.385
+STREAM done 60000 mean_us 9485.37 tails 18 uncleared 0 boundaries 44 wall_s 569.34
+STREAM done 70000 mean_us 10424.1 tails 21 uncleared 0 boundaries 44 wall_s 729.944
+STREAM done 80000 mean_us 11118.3 tails 22 uncleared 0 boundaries 44 wall_s 889.761
+STREAM done 90000 mean_us 11647.7 tails 25 uncleared 0 boundaries 48 wall_s 1048.62
+STREAM done 100000 mean_us 12040.9 tails 28 uncleared 0 boundaries 50 wall_s 1204.46
+STREAM done 110000 mean_us 12317.1 tails 31 uncleared 0 boundaries 56 wall_s 1355.29
+STREAM done 120000 mean_us 12528 tails 38 uncleared 0 boundaries 58 wall_s 1503.81
+STREAM done 130000 mean_us 12645.6 tails 40 uncleared 0 boundaries 62 wall_s 1644.41
+STREAM done 140000 mean_us 12713.4 tails 46 uncleared 0 boundaries 68 wall_s 1780.4
+STREAM done 150000 mean_us 12755.7 tails 48 uncleared 0 boundaries 74 wall_s 1913.92
+STREAM done 160000 mean_us 12784.9 tails 50 uncleared 0 boundaries 80 wall_s 2046.19
+STREAM done 170000 mean_us 12786.4 tails 51 uncleared 0 boundaries 88 wall_s 2174.32
+STREAM done 180000 mean_us 12766.9 tails 51 uncleared 0 boundaries 92 wall_s 2298.72
+STREAM done 190000 mean_us 12742.9 tails 53 uncleared 0 boundaries 96 wall_s 2421.86
+STREAM done 200000 mean_us 12712.4 tails 57 uncleared 0 boundaries 100 wall_s 2543.24
+STREAM done 210000 mean_us 12677.8 tails 58 uncleared 0 boundaries 104 wall_s 2663.14
+STREAM done 220000 mean_us 12647.4 tails 60 uncleared 0 boundaries 104 wall_s 2783.26
+STREAM done 230000 mean_us 12610.8 tails 62 uncleared 0 boundaries 116 wall_s 2901.35
+STREAM done 240000 mean_us 12564.5 tails 64 uncleared 0 boundaries 122 wall_s 3016.39
+STREAM done 250000 mean_us 12520.2 tails 66 uncleared 0 boundaries 130 wall_s 3130.99
+STREAM done 260000 mean_us 12476.4 tails 67 uncleared 0 boundaries 134 wall_s 3244.83
+STREAM done 270000 mean_us 12435.4 tails 67 uncleared 0 boundaries 136 wall_s 3358.57
+STREAM done 280000 mean_us 12394 tails 71 uncleared 0 boundaries 142 wall_s 3471.36
+STREAM done 290000 mean_us 12359 tails 73 uncleared 0 boundaries 152 wall_s 3585.2
+STREAM done 300000 mean_us 12320.7 tails 73 uncleared 0 boundaries 156 wall_s 3697.33
+STREAM done 310000 mean_us 12284.3 tails 74 uncleared 0 boundaries 160 wall_s 3809.3
+STREAM done 320000 mean_us 12252.5 tails 75 uncleared 0 boundaries 164 wall_s 3921.99
+STREAM done 330000 mean_us 12219.1 tails 77 uncleared 0 boundaries 168 wall_s 4033.55
+STREAM done 340000 mean_us 12186.7 tails 79 uncleared 0 boundaries 170 wall_s 4144.75
+STREAM done 350000 mean_us 12152.6 tails 80 uncleared 0 boundaries 172 wall_s 4254.72
+STREAM done 360000 mean_us 12120.1 tails 82 uncleared 0 boundaries 174 wall_s 4364.59
+STREAM done 370000 mean_us 12090.1 tails 83 uncleared 0 boundaries 176 wall_s 4474.73
+STREAM done 380000 mean_us 12059.6 tails 83 uncleared 0 boundaries 178 wall_s 4584.07
+STREAM done 390000 mean_us 12030.4 tails 86 uncleared 0 boundaries 180 wall_s 4693.29
+STREAM done 400000 mean_us 12003.9 tails 88 uncleared 0 boundaries 186 wall_s 4803.04
+STREAM done 410000 mean_us 11977.2 tails 91 uncleared 0 boundaries 190 wall_s 4912.16
+STREAM done 420000 mean_us 11950.9 tails 91 uncleared 0 boundaries 194 wall_s 5020.95
+STREAM done 430000 mean_us 11925.3 tails 94 uncleared 0 boundaries 204 wall_s 5129.46
+STREAM done 440000 mean_us 11895.9 tails 98 uncleared 0 boundaries 214 wall_s 5235.83
+STREAM done 450000 mean_us 11869.3 tails 101 uncleared 0 boundaries 216 wall_s 5342.86
+STREAM done 460000 mean_us 11842.5 tails 105 uncleared 0 boundaries 222 wall_s 5449.26
+STREAM done 470000 mean_us 11814.7 tails 107 uncleared 0 boundaries 228 wall_s 5554.64
+STREAM done 480000 mean_us 11789.2 tails 112 uncleared 0 boundaries 238 wall_s 5660.61
+STREAM done 490000 mean_us 11763.2 tails 114 uncleared 0 boundaries 242 wall_s 5765.77
+STREAM done 500000 mean_us 11739.9 tails 117 uncleared 0 boundaries 246 wall_s 5871.83
+STREAM done 510000 mean_us 11716.6 tails 122 uncleared 0 boundaries 254 wall_s 5977.39
+STREAM done 520000 mean_us 11695.2 tails 124 uncleared 0 boundaries 264 wall_s 6083.46
+STREAM done 530000 mean_us 11669.6 tails 126 uncleared 0 boundaries 266 wall_s 6186.88
+STREAM done 540000 mean_us 11647.4 tails 128 uncleared 0 boundaries 268 wall_s 6291.6
+STREAM done 550000 mean_us 11625.4 tails 129 uncleared 0 boundaries 276 wall_s 6396
+STREAM done 560000 mean_us 11604.3 tails 130 uncleared 0 boundaries 282 wall_s 6500.48
+STREAM done 570000 mean_us 11583.9 tails 131 uncleared 0 boundaries 292 wall_s 6604.97
+STREAM done 580000 mean_us 11562.7 tails 134 uncleared 0 boundaries 296 wall_s 6708.54
+STREAM done 590000 mean_us 11539.8 tails 139 uncleared 0 boundaries 296 wall_s 6810.7
+STREAM done 600000 mean_us 11519.5 tails 142 uncleared 0 boundaries 300 wall_s 6913.95
+STREAM done 610000 mean_us 11500.7 tails 143 uncleared 0 boundaries 308 wall_s 7017.68
+STREAM done 620000 mean_us 11482 tails 144 uncleared 0 boundaries 318 wall_s 7121.12
+STREAM done 630000 mean_us 11464.3 tails 145 uncleared 0 boundaries 328 wall_s 7224.83
+STREAM done 640000 mean_us 11446.8 tails 147 uncleared 0 boundaries 330 wall_s 7328.35
+STREAM done 650000 mean_us 11428.6 tails 147 uncleared 0 boundaries 334 wall_s 7430.98
+STREAM done 660000 mean_us 11411.4 tails 148 uncleared 0 boundaries 334 wall_s 7533.96
+STREAM done 670000 mean_us 11394.8 tails 149 uncleared 0 boundaries 344 wall_s 7637.02
+STREAM done 680000 mean_us 11379 tails 153 uncleared 0 boundaries 346 wall_s 7740.23
+STREAM done 690000 mean_us 11362.6 tails 154 uncleared 0 boundaries 356 wall_s 7842.73
+STREAM done 700000 mean_us 11346.5 tails 160 uncleared 0 boundaries 362 wall_s 7945.13
+STREAM done 710000 mean_us 11330.7 tails 163 uncleared 0 boundaries 366 wall_s 8047.4
+STREAM done 720000 mean_us 11314.6 tails 171 uncleared 0 boundaries 368 wall_s 8149.19
+STREAM done 730000 mean_us 11299 tails 174 uncleared 0 boundaries 370 wall_s 8250.97
+STREAM done 740000 mean_us 11283.6 tails 175 uncleared 0 boundaries 378 wall_s 8352.58
+STREAM done 750000 mean_us 11268.2 tails 176 uncleared 0 boundaries 384 wall_s 8453.96
+STREAM done 760000 mean_us 11253.5 tails 178 uncleared 0 boundaries 386 wall_s 8555.44
+STREAM done 770000 mean_us 11237.5 tails 182 uncleared 0 boundaries 392 wall_s 8655.73
+STREAM done 780000 mean_us 11223.7 tails 185 uncleared 0 boundaries 396 wall_s 8757.37
+STREAM done 790000 mean_us 11209.5 tails 187 uncleared 0 boundaries 404 wall_s 8858.39
+STREAM done 800000 mean_us 11195.7 tails 188 uncleared 0 boundaries 408 wall_s 8959.49
+STREAM done 810000 mean_us 11182.1 tails 189 uncleared 0 boundaries 410 wall_s 9060.53
+STREAM done 820000 mean_us 11170.2 tails 192 uncleared 0 boundaries 414 wall_s 9162.56
+STREAM done 830000 mean_us 11155.6 tails 195 uncleared 0 boundaries 422 wall_s 9262.22
+STREAM done 840000 mean_us 11141.6 tails 200 uncleared 0 boundaries 424 wall_s 9362.06
+STREAM done 850000 mean_us 11129.2 tails 202 uncleared 0 boundaries 432 wall_s 9462.98
+STREAM done 860000 mean_us 11117.4 tails 206 uncleared 0 boundaries 438 wall_s 9564.12
+STREAM done 870000 mean_us 11103 tails 210 uncleared 0 boundaries 442 wall_s 9662.79
+STREAM done 880000 mean_us 11089.5 tails 211 uncleared 0 boundaries 448 wall_s 9762.01
+STREAM done 890000 mean_us 11077.2 tails 214 uncleared 0 boundaries 454 wall_s 9861.97
+STREAM done 900000 mean_us 11064.7 tails 215 uncleared 0 boundaries 460 wall_s 9961.55
+STREAM done 910000 mean_us 11051.1 tails 217 uncleared 0 boundaries 462 wall_s 10059.9
+STREAM done 920000 mean_us 11037.7 tails 219 uncleared 0 boundaries 464 wall_s 10158.1
+STREAM done 930000 mean_us 11024.9 tails 220 uncleared 0 boundaries 464 wall_s 10256.6
+STREAM done 940000 mean_us 11012.1 tails 222 uncleared 0 boundaries 464 wall_s 10354.9
+STREAM done 950000 mean_us 11000.3 tails 224 uncleared 0 boundaries 468 wall_s 10453.8
+STREAM done 960000 mean_us 10988.4 tails 228 uncleared 0 boundaries 472 wall_s 10552.4
+STREAM done 970000 mean_us 10976.8 tails 230 uncleared 0 boundaries 474 wall_s 10651.1
+STREAM done 980000 mean_us 10965.7 tails 233 uncleared 0 boundaries 482 wall_s 10750
+STREAM done 990000 mean_us 10954.5 tails 239 uncleared 0 boundaries 490 wall_s 10848.6
+STREAM done 1000000 mean_us 10942.9 tails 242 uncleared 0 boundaries 496 wall_s 10946.6
+STREAM_DONE n 1000000 mean_us 10942.9 tails 242 uncleared 0 boundaries 496 slides 992282 byte_match 1 lookup_ns 756.284 lookup_miss 0 audit_miss 0 audited 199000000
+FB_STREAM_DONE
+keys 199999999
+STREAM done 10000 mean_us 3793.3 tails 1 uncleared 0 boundaries 32 wall_s 37.9662
+STREAM done 20000 mean_us 4420.55 tails 6 uncleared 0 boundaries 32 wall_s 88.4784
+STREAM done 30000 mean_us 4671.86 tails 11 uncleared 0 boundaries 32 wall_s 140.257
+STREAM done 40000 mean_us 4942.67 tails 12 uncleared 0 boundaries 32 wall_s 197.842
+STREAM done 50000 mean_us 5295.86 tails 16 uncleared 0 boundaries 32 wall_s 264.963
+STREAM done 60000 mean_us 5674.01 tails 16 uncleared 0 boundaries 32 wall_s 340.645
+STREAM done 70000 mean_us 6369.77 tails 18 uncleared 0 boundaries 36 wall_s 446.123
+STREAM done 80000 mean_us 7402.23 tails 24 uncleared 0 boundaries 38 wall_s 592.454
+STREAM done 90000 mean_us 8165.56 tails 24 uncleared 0 boundaries 44 wall_s 735.213
+STREAM done 100000 mean_us 8724.73 tails 26 uncleared 0 boundaries 46 wall_s 872.822
+STREAM done 110000 mean_us 9121.29 tails 28 uncleared 0 boundaries 48 wall_s 1003.73
+STREAM done 120000 mean_us 9449.79 tails 30 uncleared 0 boundaries 48 wall_s 1134.4
+STREAM done 130000 mean_us 9725.42 tails 34 uncleared 0 boundaries 48 wall_s 1264.76
+STREAM done 140000 mean_us 9965.79 tails 36 uncleared 0 boundaries 52 wall_s 1395.71
+STREAM done 150000 mean_us 10166.6 tails 38 uncleared 0 boundaries 56 wall_s 1525.52
+STREAM done 160000 mean_us 10333 tails 40 uncleared 0 boundaries 66 wall_s 1653.85
+STREAM done 170000 mean_us 10461.8 tails 41 uncleared 0 boundaries 70 wall_s 1779.11
+STREAM done 180000 mean_us 10574.3 tails 44 uncleared 0 boundaries 72 wall_s 1904.02
+STREAM done 190000 mean_us 10671.5 tails 44 uncleared 0 boundaries 80 wall_s 2028.27
+STREAM done 200000 mean_us 10743.9 tails 46 uncleared 0 boundaries 86 wall_s 2149.5
+STREAM done 210000 mean_us 10815.3 tails 47 uncleared 0 boundaries 96 wall_s 2271.96
+STREAM done 220000 mean_us 10880.9 tails 48 uncleared 0 boundaries 104 wall_s 2394.6
+STREAM done 230000 mean_us 10930.6 tails 51 uncleared 0 boundaries 110 wall_s 2514.87
+STREAM done 240000 mean_us 10965.8 tails 52 uncleared 0 boundaries 118 wall_s 2632.66
+STREAM done 250000 mean_us 10994 tails 56 uncleared 0 boundaries 120 wall_s 2749.4
+STREAM done 260000 mean_us 11021.5 tails 58 uncleared 0 boundaries 120 wall_s 2866.54
+STREAM done 270000 mean_us 11047.1 tails 60 uncleared 0 boundaries 124 wall_s 2983.68
+STREAM done 280000 mean_us 11067.5 tails 63 uncleared 0 boundaries 126 wall_s 3099.91
+STREAM done 290000 mean_us 11085 tails 63 uncleared 0 boundaries 126 wall_s 3215.69
+STREAM done 300000 mean_us 11102.6 tails 66 uncleared 0 boundaries 132 wall_s 3331.85
+STREAM done 310000 mean_us 11116.6 tails 70 uncleared 0 boundaries 140 wall_s 3447.26
+STREAM done 320000 mean_us 11128.8 tails 73 uncleared 0 boundaries 140 wall_s 3562.35
+STREAM done 330000 mean_us 11139.2 tails 75 uncleared 0 boundaries 148 wall_s 3677.12
+STREAM done 340000 mean_us 11144.9 tails 81 uncleared 0 boundaries 150 wall_s 3790.48
+STREAM done 350000 mean_us 11146.8 tails 84 uncleared 0 boundaries 152 wall_s 3902.64
+STREAM done 360000 mean_us 11144.5 tails 85 uncleared 0 boundaries 154 wall_s 4013.32
+STREAM done 370000 mean_us 11138 tails 86 uncleared 0 boundaries 160 wall_s 4122.38
+STREAM done 380000 mean_us 11129.5 tails 88 uncleared 0 boundaries 166 wall_s 4230.57
+STREAM done 390000 mean_us 11119 tails 88 uncleared 0 boundaries 174 wall_s 4337.84
+STREAM done 400000 mean_us 11107.7 tails 90 uncleared 0 boundaries 186 wall_s 4444.52
+STREAM done 410000 mean_us 11094.1 tails 93 uncleared 0 boundaries 194 wall_s 4550.04
+STREAM done 420000 mean_us 11078.4 tails 94 uncleared 0 boundaries 198 wall_s 4654.45
+STREAM done 430000 mean_us 11063.4 tails 97 uncleared 0 boundaries 202 wall_s 4758.83
+STREAM done 440000 mean_us 11049.6 tails 97 uncleared 0 boundaries 204 wall_s 4863.43
+STREAM done 450000 mean_us 11035.2 tails 100 uncleared 0 boundaries 208 wall_s 4967.48
+STREAM done 460000 mean_us 11021.8 tails 101 uncleared 0 boundaries 210 wall_s 5071.67
+STREAM done 470000 mean_us 11008 tails 103 uncleared 0 boundaries 216 wall_s 5175.44
+STREAM done 480000 mean_us 10994.4 tails 104 uncleared 0 boundaries 220 wall_s 5279.06
+STREAM done 490000 mean_us 10981.8 tails 106 uncleared 0 boundaries 222 wall_s 5382.83
+STREAM done 500000 mean_us 10967.8 tails 107 uncleared 0 boundaries 230 wall_s 5485.72
+STREAM done 510000 mean_us 10954 tails 108 uncleared 0 boundaries 234 wall_s 5588.4
+STREAM done 520000 mean_us 10940.5 tails 113 uncleared 0 boundaries 234 wall_s 5690.94
+STREAM done 530000 mean_us 10927 tails 116 uncleared 0 boundaries 237 wall_s 5793.21
+STREAM done 540000 mean_us 10913.7 tails 117 uncleared 0 boundaries 243 wall_s 5895.33
+STREAM done 550000 mean_us 10899.8 tails 120 uncleared 0 boundaries 253 wall_s 5996.88
+STREAM done 560000 mean_us 10886.8 tails 124 uncleared 0 boundaries 255 wall_s 6098.64
+STREAM done 570000 mean_us 10873.5 tails 126 uncleared 0 boundaries 257 wall_s 6199.97
+STREAM done 580000 mean_us 10860 tails 126 uncleared 0 boundaries 261 wall_s 6300.92
+STREAM done 590000 mean_us 10846 tails 128 uncleared 0 boundaries 265 wall_s 6401.27
+STREAM done 600000 mean_us 10831.8 tails 131 uncleared 0 boundaries 269 wall_s 6501.24
+STREAM done 610000 mean_us 10817.6 tails 132 uncleared 0 boundaries 273 wall_s 6600.94
+STREAM done 620000 mean_us 10803.2 tails 134 uncleared 0 boundaries 275 wall_s 6700.21
+STREAM done 630000 mean_us 10789.6 tails 136 uncleared 0 boundaries 277 wall_s 6799.72
+STREAM done 640000 mean_us 10775.7 tails 140 uncleared 0 boundaries 279 wall_s 6898.78
+STREAM done 650000 mean_us 10761.6 tails 148 uncleared 0 boundaries 281 wall_s 6997.42
+STREAM done 660000 mean_us 10748.3 tails 151 uncleared 0 boundaries 281 wall_s 7096.27
+STREAM done 670000 mean_us 10735.1 tails 155 uncleared 0 boundaries 281 wall_s 7194.93
+STREAM done 680000 mean_us 10722.4 tails 159 uncleared 0 boundaries 283 wall_s 7293.65
+STREAM done 690000 mean_us 10709.5 tails 163 uncleared 0 boundaries 293 wall_s 7392.03
+STREAM done 700000 mean_us 10696.5 tails 164 uncleared 0 boundaries 297 wall_s 7490.1
+STREAM done 710000 mean_us 10684.1 tails 166 uncleared 0 boundaries 297 wall_s 7588.25
+STREAM done 720000 mean_us 10671.8 tails 169 uncleared 0 boundaries 307 wall_s 7686.31
+STREAM done 730000 mean_us 10659.6 tails 170 uncleared 0 boundaries 311 wall_s 7784.13
+STREAM done 740000 mean_us 10647.2 tails 175 uncleared 0 boundaries 313 wall_s 7881.61
+STREAM done 750000 mean_us 10635.5 tails 178 uncleared 0 boundaries 315 wall_s 7979.31
+STREAM done 760000 mean_us 10623.6 tails 181 uncleared 0 boundaries 317 wall_s 8076.71
+STREAM done 770000 mean_us 10612 tails 183 uncleared 0 boundaries 319 wall_s 8174
+STREAM done 780000 mean_us 10600.3 tails 186 uncleared 0 boundaries 329 wall_s 8271.08
+STREAM done 790000 mean_us 10589 tails 188 uncleared 0 boundaries 329 wall_s 8368.17
+STREAM done 800000 mean_us 10578.1 tails 190 uncleared 0 boundaries 333 wall_s 8465.39
+STREAM done 810000 mean_us 10567.5 tails 190 uncleared 0 boundaries 337 wall_s 8562.57
+STREAM done 820000 mean_us 10557.1 tails 192 uncleared 0 boundaries 339 wall_s 8659.8
+STREAM done 830000 mean_us 10546.6 tails 194 uncleared 0 boundaries 343 wall_s 8756.7
+STREAM done 840000 mean_us 10536.3 tails 198 uncleared 0 boundaries 345 wall_s 8853.54
+STREAM done 850000 mean_us 10526 tails 200 uncleared 0 boundaries 347 wall_s 8950.16
+STREAM done 860000 mean_us 10515.7 tails 204 uncleared 0 boundaries 349 wall_s 9046.56
+STREAM done 870000 mean_us 10505.5 tails 209 uncleared 0 boundaries 354 wall_s 9142.89
+STREAM done 880000 mean_us 10494.7 tails 211 uncleared 0 boundaries 364 wall_s 9238.48
+STREAM done 890000 mean_us 10483.6 tails 211 uncleared 0 boundaries 364 wall_s 9333.62
+STREAM done 900000 mean_us 10472.9 tails 213 uncleared 0 boundaries 368 wall_s 9428.86
+STREAM done 910000 mean_us 10462.8 tails 217 uncleared 0 boundaries 368 wall_s 9524.43
+STREAM done 920000 mean_us 10453.1 tails 220 uncleared 0 boundaries 374 wall_s 9620.16
+STREAM done 930000 mean_us 10442.9 tails 221 uncleared 0 boundaries 378 wall_s 9715.21
+STREAM done 940000 mean_us 10433.2 tails 224 uncleared 0 boundaries 384 wall_s 9810.57
+STREAM done 950000 mean_us 10423.7 tails 228 uncleared 0 boundaries 388 wall_s 9905.9
+STREAM done 960000 mean_us 10414 tails 234 uncleared 0 boundaries 388 wall_s 10000.9
+STREAM done 970000 mean_us 10404.3 tails 237 uncleared 0 boundaries 394 wall_s 10095.7
+STREAM done 980000 mean_us 10395 tails 240 uncleared 0 boundaries 398 wall_s 10190.6
+STREAM done 990000 mean_us 10385.6 tails 244 uncleared 0 boundaries 406 wall_s 10285.3
+STREAM done 1000000 mean_us 10376.1 tails 246 uncleared 0 boundaries 414 wall_s 10379.7
+STREAM_DONE n 1000000 mean_us 10376.1 tails 246 uncleared 0 boundaries 414 slides 993044 byte_match 1 lookup_ns 625.354 lookup_miss 0 audit_miss 0 audited 198999999
+BOOKS_STREAM_DONE
+keys 800000000
+STREAM done 10000 mean_us 13949.7 tails 1 uncleared 0 boundaries 32 wall_s 139.54
+STREAM done 20000 mean_us 16523.1 tails 2 uncleared 0 boundaries 32 wall_s 330.55
+STREAM done 30000 mean_us 19922.5 tails 3 uncleared 0 boundaries 32 wall_s 597.808
+STREAM done 40000 mean_us 21798.4 tails 3 uncleared 0 boundaries 32 wall_s 872.114
+STREAM done 50000 mean_us 23716.7 tails 5 uncleared 0 boundaries 32 wall_s 1186.06
+STREAM done 60000 mean_us 25766.3 tails 8 uncleared 0 boundaries 32 wall_s 1546.25
+STREAM done 70000 mean_us 28547.1 tails 10 uncleared 0 boundaries 34 wall_s 1998.62
+STREAM done 80000 mean_us 33327.2 tails 14 uncleared 0 boundaries 46 wall_s 2666.55
+STREAM done 90000 mean_us 36234.7 tails 18 uncleared 0 boundaries 50 wall_s 3261.54
+STREAM done 100000 mean_us 38404.7 tails 20 uncleared 0 boundaries 54 wall_s 3840.93
+STREAM done 110000 mean_us 40108.2 tails 22 uncleared 0 boundaries 58 wall_s 4412.42
+STREAM done 120000 mean_us 41453.9 tails 24 uncleared 0 boundaries 62 wall_s 4975.02
+STREAM done 130000 mean_us 42470.5 tails 26 uncleared 0 boundaries 70 wall_s 5521.77
+STREAM done 140000 mean_us 43315.4 tails 30 uncleared 0 boundaries 74 wall_s 6064.81
+STREAM done 150000 mean_us 44063.4 tails 31 uncleared 0 boundaries 76 wall_s 6610.21
+STREAM done 160000 mean_us 44707.7 tails 34 uncleared 0 boundaries 84 wall_s 7153.97
+STREAM done 170000 mean_us 45187.5 tails 36 uncleared 0 boundaries 90 wall_s 7682.67
+STREAM done 180000 mean_us 45599.8 tails 38 uncleared 0 boundaries 96 wall_s 8208.8
+STREAM done 190000 mean_us 45925.5 tails 41 uncleared 0 boundaries 100 wall_s 8726.74
+STREAM done 200000 mean_us 46207.3 tails 45 uncleared 0 boundaries 106 wall_s 9242.39
+STREAM done 210000 mean_us 46457.8 tails 48 uncleared 0 boundaries 112 wall_s 9757.12
+STREAM done 220000 mean_us 46683 tails 49 uncleared 0 boundaries 120 wall_s 10271.3
+STREAM done 230000 mean_us 46873 tails 51 uncleared 0 boundaries 124 wall_s 10781.9
+STREAM done 240000 mean_us 47061.6 tails 53 uncleared 0 boundaries 126 wall_s 11295.9
+STREAM done 250000 mean_us 47209.5 tails 55 uncleared 0 boundaries 138 wall_s 11803.5
+STREAM done 260000 mean_us 47311.3 tails 57 uncleared 0 boundaries 148 wall_s 12302.2
+STREAM done 270000 mean_us 47376.9 tails 57 uncleared 0 boundaries 156 wall_s 12793
+STREAM done 280000 mean_us 47434.8 tails 60 uncleared 0 boundaries 162 wall_s 13283
+STREAM done 290000 mean_us 47492.3 tails 63 uncleared 0 boundaries 166 wall_s 13774.1
+STREAM done 300000 mean_us 47536.8 tails 65 uncleared 0 boundaries 166 wall_s 14262.4
+STREAM done 310000 mean_us 47582 tails 68 uncleared 0 boundaries 166 wall_s 14751.9
+STREAM done 320000 mean_us 47619.9 tails 72 uncleared 0 boundaries 168 wall_s 15239.9
+STREAM done 330000 mean_us 47664.1 tails 74 uncleared 0 boundaries 172 wall_s 15730.7
+STREAM done 340000 mean_us 47699.7 tails 75 uncleared 0 boundaries 174 wall_s 16219.5
+STREAM done 350000 mean_us 47742.9 tails 77 uncleared 0 boundaries 186 wall_s 16711.7
+STREAM done 360000 mean_us 47769.2 tails 81 uncleared 0 boundaries 194 wall_s 17198.6
+STREAM done 370000 mean_us 47793.2 tails 87 uncleared 0 boundaries 198 wall_s 17685.2
+STREAM done 380000 mean_us 47807.7 tails 89 uncleared 0 boundaries 206 wall_s 18168.7
+STREAM done 390000 mean_us 47831.7 tails 93 uncleared 0 boundaries 216 wall_s 18656.2
+STREAM done 400000 mean_us 47843.5 tails 95 uncleared 0 boundaries 222 wall_s 19139.3
+STREAM done 410000 mean_us 47856.3 tails 96 uncleared 0 boundaries 226 wall_s 19623
+STREAM done 420000 mean_us 47863 tails 100 uncleared 0 boundaries 232 wall_s 20104.4
+STREAM done 430000 mean_us 47874.9 tails 102 uncleared 0 boundaries 238 wall_s 20588.2
+STREAM done 440000 mean_us 47894.2 tails 103 uncleared 0 boundaries 238 wall_s 21075.5
+STREAM done 450000 mean_us 47902.9 tails 106 uncleared 0 boundaries 246 wall_s 21558.4
+STREAM done 460000 mean_us 47906.3 tails 106 uncleared 0 boundaries 246 wall_s 22039
+STREAM done 470000 mean_us 47914.8 tails 107 uncleared 0 boundaries 252 wall_s 22522.2
+STREAM done 480000 mean_us 47929.1 tails 109 uncleared 0 boundaries 256 wall_s 23008.2
+STREAM done 490000 mean_us 47939 tails 112 uncleared 0 boundaries 268 wall_s 23492.4
+STREAM done 500000 mean_us 47944 tails 116 uncleared 0 boundaries 268 wall_s 23974.3
+STREAM done 510000 mean_us 47944.9 tails 124 uncleared 0 boundaries 280 wall_s 24454.3
+STREAM done 520000 mean_us 47950.7 tails 126 uncleared 0 boundaries 282 wall_s 24936.8
+STREAM done 530000 mean_us 47950.4 tails 127 uncleared 0 boundaries 286 wall_s 25416.2
+STREAM done 540000 mean_us 47943.3 tails 130 uncleared 0 boundaries 290 wall_s 25891.9
+STREAM done 550000 mean_us 47939.4 tails 132 uncleared 0 boundaries 296 wall_s 26369.2
+STREAM done 560000 mean_us 47935.3 tails 133 uncleared 0 boundaries 296 wall_s 26846.4
+STREAM done 570000 mean_us 47926.7 tails 134 uncleared 0 boundaries 304 wall_s 27320.9
+STREAM done 580000 mean_us 47912.6 tails 136 uncleared 0 boundaries 310 wall_s 27792
+STREAM done 590000 mean_us 47895.4 tails 137 uncleared 0 boundaries 318 wall_s 28261.1
+STREAM done 600000 mean_us 47878.4 tails 138 uncleared 0 boundaries 322 wall_s 28729.9
+STREAM done 610000 mean_us 47860.9 tails 140 uncleared 0 boundaries 324 wall_s 29198.1
+STREAM done 620000 mean_us 47845.8 tails 143 uncleared 0 boundaries 330 wall_s 29667.3
+STREAM done 630000 mean_us 47832.3 tails 145 uncleared 0 boundaries 338 wall_s 30137.3
+STREAM done 640000 mean_us 47817.3 tails 146 uncleared 0 boundaries 344 wall_s 30606.1
+STREAM done 650000 mean_us 47800.4 tails 148 uncleared 0 boundaries 352 wall_s 31073.3
+STREAM done 660000 mean_us 47781.5 tails 151 uncleared 0 boundaries 360 wall_s 31538.9
+STREAM done 670000 mean_us 47761.1 tails 151 uncleared 0 boundaries 360 wall_s 32003.2
+STREAM done 680000 mean_us 47746.9 tails 155 uncleared 0 boundaries 364 wall_s 32471.2
+STREAM done 690000 mean_us 47734.4 tails 158 uncleared 0 boundaries 370 wall_s 32940.1
+STREAM done 700000 mean_us 47718.7 tails 163 uncleared 0 boundaries 380 wall_s 33406.4
+STREAM done 710000 mean_us 47702.1 tails 168 uncleared 0 boundaries 390 wall_s 33871.9
+STREAM done 720000 mean_us 47684.3 tails 169 uncleared 0 boundaries 404 wall_s 34336.2
+STREAM done 730000 mean_us 47664.3 tails 172 uncleared 0 boundaries 406 wall_s 34798.5
+STREAM done 740000 mean_us 47643.4 tails 177 uncleared 0 boundaries 406 wall_s 35259.6
+STREAM done 750000 mean_us 47625.9 tails 179 uncleared 0 boundaries 408 wall_s 35723
+STREAM done 760000 mean_us 47608.3 tails 182 uncleared 0 boundaries 412 wall_s 36186
+STREAM done 770000 mean_us 47588.7 tails 183 uncleared 0 boundaries 412 wall_s 36647
+STREAM done 780000 mean_us 47571.5 tails 184 uncleared 0 boundaries 418 wall_s 37109.6
+STREAM done 790000 mean_us 47556.1 tails 190 uncleared 0 boundaries 420 wall_s 37573.1
+STREAM done 800000 mean_us 47539.7 tails 195 uncleared 0 boundaries 424 wall_s 38035.6
+STREAM done 810000 mean_us 47521.9 tails 196 uncleared 0 boundaries 428 wall_s 38496.7
+STREAM done 820000 mean_us 47503.1 tails 199 uncleared 0 boundaries 432 wall_s 38956.5
+STREAM done 830000 mean_us 47484.8 tails 201 uncleared 0 boundaries 434 wall_s 39416.4
+STREAM done 840000 mean_us 47464.5 tails 205 uncleared 0 boundaries 440 wall_s 39874.3
+STREAM done 850000 mean_us 47449.2 tails 206 uncleared 0 boundaries 446 wall_s 40335.9
+STREAM done 860000 mean_us 47433.1 tails 209 uncleared 0 boundaries 454 wall_s 40796.6
+STREAM done 870000 mean_us 47417.1 tails 210 uncleared 0 boundaries 462 wall_s 41257.1
+STREAM done 880000 mean_us 47398.9 tails 213 uncleared 0 boundaries 466 wall_s 41715.3
+STREAM done 890000 mean_us 47378.5 tails 216 uncleared 0 boundaries 472 wall_s 42171.2
+STREAM done 900000 mean_us 47361.7 tails 217 uncleared 0 boundaries 478 wall_s 42629.9
+STREAM done 910000 mean_us 47344.7 tails 224 uncleared 0 boundaries 486 wall_s 43088.1
+STREAM done 920000 mean_us 47326.3 tails 225 uncleared 0 boundaries 490 wall_s 43544.7
+STREAM done 930000 mean_us 47309 tails 230 uncleared 0 boundaries 496 wall_s 44001.8
+STREAM done 940000 mean_us 47290.5 tails 233 uncleared 0 boundaries 502 wall_s 44457.6
+STREAM done 950000 mean_us 47274.5 tails 236 uncleared 0 boundaries 508 wall_s 44915.4
+STREAM done 960000 mean_us 47254 tails 239 uncleared 0 boundaries 512 wall_s 45368.5
+STREAM done 970000 mean_us 47238.4 tails 241 uncleared 0 boundaries 516 wall_s 45826
+STREAM done 980000 mean_us 47220.4 tails 243 uncleared 0 boundaries 524 wall_s 46280.8
+STREAM done 990000 mean_us 47203.2 tails 246 uncleared 0 boundaries 528 wall_s 46736
+STREAM done 1000000 mean_us 47182.6 tails 249 uncleared 0 boundaries 532 wall_s 47187.4
+STREAM_DONE n 1000000 mean_us 47182.6 tails 249 uncleared 0 boundaries 532 slides 997622 byte_match 1 lookup_ns 918.236 lookup_miss 0 audit_miss 0 audited 799000000
+ALL_DONE

@@ -1,0 +1,45 @@
+COMPILE_OK
+keys 90437011
+CHECK 0 rank 81476764 repr 1 packed_keys 1 us 578.3
+CHECK 1 rank 86325818 repr 1 packed_keys 1 us 622.719
+CHECK 2 rank 5029272 repr 1 packed_keys 1 us 517.757
+CHECK 3 rank 35943138 repr 1 packed_keys 1 us 341.802
+CHECK 4 rank 16650548 repr 1 packed_keys 1 us 266.308
+CHECK 5 rank 51157899 repr 1 packed_keys 1 us 742.586
+CHECK 6 rank 5390097 repr 1 packed_keys 1 us 515.355
+CHECK 7 rank 35073842 repr 1 packed_keys 1 us 303.18
+IDENTITY n 8 drop_half 1 zero 1 modulus 4096 repr_match 8 packed_keys_match 8 both 8 mean_us 486.001
+WIKI_DONE
+keys 200000000
+CHECK 0 rank 180184558 repr 1 packed_keys 1 us 553.464
+CHECK 1 rank 190908163 repr 1 packed_keys 1 us 2006.56
+CHECK 2 rank 11122155 repr 1 packed_keys 1 us 1996.24
+CHECK 3 rank 79487675 repr 1 packed_keys 1 us 357.974
+CHECK 4 rank 36822421 repr 1 packed_keys 1 us 2121.17
+CHECK 5 rank 113134873 repr 1 packed_keys 1 us 2315.2
+CHECK 6 rank 11920115 repr 1 packed_keys 1 us 1998.44
+CHECK 7 rank 77565239 repr 1 packed_keys 1 us 2002.1
+IDENTITY n 8 drop_half 1 zero 1 modulus 4096 repr_match 8 packed_keys_match 8 both 8 mean_us 1668.89
+FB_DONE
+keys 199999999
+CHECK 0 rank 180184558 repr 1 packed_keys 1 us 561.28
+CHECK 1 rank 190908162 repr 1 packed_keys 1 us 338.334
+CHECK 2 rank 11122155 repr 1 packed_keys 1 us 952.249
+CHECK 3 rank 79487675 repr 1 packed_keys 1 us 355.352
+CHECK 4 rank 36822420 repr 1 packed_keys 1 us 371.367
+CHECK 5 rank 113134873 repr 1 packed_keys 1 us 923.662
+CHECK 6 rank 11920114 repr 1 packed_keys 1 us 1054.62
+CHECK 7 rank 77565239 repr 1 packed_keys 1 us 362.395
+IDENTITY n 8 drop_half 1 zero 1 modulus 4096 repr_match 8 packed_keys_match 8 both 8 mean_us 614.907
+BOOKS_DONE
+keys 800000000
+CHECK 0 rank 720738235 repr 1 packed_keys 1 us 5222.94
+CHECK 1 rank 763632654 repr 1 packed_keys 1 us 4648.55
+CHECK 2 rank 44488623 repr 1 packed_keys 1 us 4671.25
+CHECK 3 rank 317950701 repr 1 packed_keys 1 us 4610.99
+CHECK 4 rank 147289684 repr 1 packed_keys 1 us 1067.27
+CHECK 5 rank 452539495 repr 1 packed_keys 1 us 1076.49
+CHECK 6 rank 47680460 repr 1 packed_keys 1 us 4642.09
+CHECK 7 rank 310260957 repr 1 packed_keys 1 us 4661.32
+IDENTITY n 8 drop_half 1 zero 1 modulus 4096 repr_match 8 packed_keys_match 8 both 8 mean_us 3825.11
+ALL_DONE

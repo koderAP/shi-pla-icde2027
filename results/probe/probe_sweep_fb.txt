@@ -1,0 +1,19 @@
+keys 200000000
+PROGRESS sample 32/32
+MOD 0 upper_anchors 1 bytes 36900608 2228559 77313 412 3 1
+SAMPLE n 32 start_key_changed 17 mean_us_changed 85464.8 mean_us_same 40666.8 tails 0 mean_us 64465.7 faults 98677 major 0 mean_move_us 56029.6 mean_merge_us 0.03225 mean_prefix_us 0.915188 mean_refit_us 8431.36 mean_fit_us 190.951 mean_upper_us 8227.27 uncleared 0
+PROGRESS sample 32/32
+MOD 1024 upper_anchors 1 bytes 44050336 2337829 219968 195349
+SAMPLE n 32 start_key_changed 17 mean_us_changed 18960.6 mean_us_same 1067.38 tails 0 mean_us 10573.2 faults 108987 major 0 mean_move_us 1.05088 mean_merge_us 0.0263437 mean_prefix_us 923.711 mean_refit_us 9642.4 mean_fit_us 163.739 mean_upper_us 9473.52 uncleared 0
+PROGRESS sample 32/32
+MOD 4096 upper_anchors 1 bytes 38604336 2255847 107656 49268
+SAMPLE n 32 start_key_changed 17 mean_us_changed 16265.8 mean_us_same 358.494 tails 0 mean_us 8809.25 faults 97545 major 0 mean_move_us 3.29947 mean_merge_us 0.0231562 mean_prefix_us 218.318 mean_refit_us 8582.74 mean_fit_us 159.946 mean_upper_us 8417.89 uncleared 0
+PROGRESS sample 32/32
+MOD 16384 upper_anchors 1 bytes 37508176 2235335 84389 12269 12268
+SAMPLE n 32 start_key_changed 18 mean_us_changed 14969.6 mean_us_same 190.374 tails 0 mean_us 8503.66 faults 100844 major 0 mean_move_us 16.4308 mean_merge_us 0.0233125 mean_prefix_us 52.3028 mean_refit_us 8430.36 mean_fit_us 144.623 mean_upper_us 8280.81 uncleared 0
+keys 200000000
+REPEAT 0
+PROGRESS sample 8/8
+MOD 4096 upper_anchors 0 bytes 37357600 2255847 78563 437 2 1
+SAMPLE n 8 start_key_changed 6 mean_us_changed 13147.1 mean_us_same 483.707 tails 0 mean_us 9981.23 faults 27506 major 0 mean_move_us 3.02188 mean_merge_us 0.0255 mean_prefix_us 210.57 mean_refit_us 9761.8 mean_fit_us 202.999 mean_upper_us 9522.33 uncleared 0
+UPPER_OFF_MATCH 8 of 8

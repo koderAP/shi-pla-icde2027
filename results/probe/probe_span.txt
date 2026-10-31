@@ -1,0 +1,25 @@
+COMPILE_OK
+keys 90437011
+REPEAT 0
+PROGRESS sample 32/32
+MOD 4096 upper_anchors 1 bytes 1785584 67065 22273 22261
+SAMPLE n 32 start_key_changed 13 mean_us_changed 1145.47 mean_us_same 381.375 tails 0 mean_us 691.787 faults 3104 major 0 mean_move_us 2.36806 mean_merge_us 0.0345625 mean_prefix_us 93.1096 mean_refit_us 594.57 mean_fit_us 312.747 mean_upper_us 271.447 mean_span_us 30.7314 span_rewritten 2 uncleared 0
+WIKI_DONE
+keys 200000000
+REPEAT 0
+PROGRESS sample 32/32
+MOD 4096 upper_anchors 1 bytes 38604336 2255847 107656 49268
+SAMPLE n 32 start_key_changed 17 mean_us_changed 15947.3 mean_us_same 393.582 tails 0 mean_us 8656.49 faults 101114 major 0 mean_move_us 3.19809 mean_merge_us 0.0285 mean_prefix_us 207.72 mean_refit_us 8440.46 mean_fit_us 214.932 mean_upper_us 8213.33 mean_span_us 535.833 span_rewritten 1 uncleared 0
+FB_DONE
+keys 199999999
+REPEAT 0
+PROGRESS sample 32/32
+MOD 4096 upper_anchors 1 bytes 14950784 837007 48811 48606
+SAMPLE n 32 start_key_changed 17 mean_us_changed 4402.1 mean_us_same 399.068 tails 0 mean_us 2525.68 faults 17452 major 0 mean_move_us 3.84066 mean_merge_us 0.0355313 mean_prefix_us 207.834 mean_refit_us 2309.44 mean_fit_us 224.046 mean_upper_us 2073.26 mean_span_us 175.581 span_rewritten 1 uncleared 0
+BOOKS_DONE
+keys 800000000
+REPEAT 0
+PROGRESS sample 32/32
+MOD 4096 upper_anchors 1 bytes 118340528 6690022 315688 195292 195281
+SAMPLE n 32 start_key_changed 19 mean_us_changed 40187.7 mean_us_same 1102.16 tails 0 mean_us 24309.2 faults 249783 major 0 mean_move_us 4.04434 mean_merge_us 0.0406562 mean_prefix_us 931.082 mean_refit_us 23367 mean_fit_us 210.932 mean_upper_us 23143.1 mean_span_us 0.0815938 span_rewritten 0 uncleared 0
+ALL_DONE

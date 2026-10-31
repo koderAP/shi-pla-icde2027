@@ -1,0 +1,31 @@
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+DROP TABLE
+CREATE TABLE
+INSERT 0 200000
+--- 1. Build Canonical SHI-PLA Index inside PostgreSQL 14 ---
+                                                                                                                     build_report                                                                                                                      
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {"mode": "optimal", "levels": 2, "n_keys": 200000, "epsilon": 16, "build_ms": 1.96625, "segments": 69, "index_name": "users_shi_idx", "model_bytes": 1120, "bytes_per_key": 0.0056, "anchor_modulus": 4096, "snapshot_fnv1a64": "0x9dad48f4ce7dafd0"}
+(1 row)
+
+--- 2. Verify Exact Learned Index Lookups in SQL ---
+ user_id | learned_rank 
+---------+--------------
+  101030 |            0
+  102060 |            1
+  103090 |            2
+  104120 |            3
+  105150 |            4
+(5 rows)
+
+--- 3. Execute GDPR Article 17 Right-to-Erasure on Single Key ---
+DO
+--- 4. Run 200-Delete GDPR Erasure & T1 Leakage Audit inside PostgreSQL 14 ---
+                                                                                                                                                                gdpr_audit_report                                                                                                                                                                
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {"probes": 200, "index_name": "users_shi_idx", "mean_rebuild_us": 1953.84, "refit_segments_max": 2, "refit_segments_p99": 2, "speedup_vs_rebuild": 27.1835, "refit_segments_mean": 2, "mean_local_delete_us": 71.8758, "pgm_dynamic_leak_rate": 1, "shi_snapshot_leak_rate": 0, "shi_byte_identical_rate": 1, "hibtree_byte_identical_rate": 1}
+(1 row)
+

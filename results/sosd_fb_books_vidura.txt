@@ -1,0 +1,16 @@
+host: dell-R760, Intel Xeon Gold 6430, GCC 13.3.0 -O3, one thread
+lookup: segment walk capped, then binary search; rank window unchanged
+
+=== fb_200M_uint64 --deletes 8 ===
+keys 200000000 unique_span 18446744073709551613
+shi_segments 2255847 shi_levels 3 shi_model_bytes 38604336 pgm_segments 2120485 pgm_model_bytes 35019496
+shi_build_ms 29353.5 pgm_build_ms 7578.56 lookup_misses 0 lookup_audited 200000000
+deletes 8 byte_identical 8 refit_mean 2.25 refit_max 3 e2e_delete_us 112529 model_only_us 39628.5 rebuild_us 8.58736e+06 e2e_speedup 76.3125
+pgm_dynamic_probes 8 pgm_tombstones_found 8 pgm_bytes_per_delete 16
+
+=== books_200M_uint32 --u32 --deletes 8 ===
+keys 199999999 unique_span 4294967294
+shi_segments 837007 shi_levels 3 shi_model_bytes 14950784 pgm_segments 729231 pgm_model_bytes 11703112
+shi_build_ms 14960.5 pgm_build_ms 6138.9 lookup_misses 0 lookup_audited 199999999
+deletes 8 byte_identical 8 refit_mean 2.75 refit_max 4 e2e_delete_us 110573 model_only_us 42158.4 rebuild_us 7.26663e+06 e2e_speedup 65.7181
+pgm_dynamic_probes 8 pgm_tombstones_found 8 pgm_bytes_per_delete 16

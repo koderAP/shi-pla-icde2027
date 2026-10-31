@@ -1,0 +1,33 @@
+host: dell-R760, Intel Xeon Gold 6430, GCC 13.3 -O3 -march=native
+1e6 lookups. Anchor sweep: 4 deletes, each byte-checked against a rebuild.
+ALEX: first 10M records, 20 erases, payload is the key itself. Re-inserted between probes.
+
+=== wiki full 90437011 ===
+shi_segs 67065 shi_bytes 1785584 pgm_segs 46818 pgm_bytes 753576
+btree_bytes 70074040 btree_height 7
+pgm_ns 225.555 shi_ns 382.533 shi_over_pgm 1.696 btree_ns 575.357 btree_over_pgm 2.551
+M 0     segs 52473  bytes 845872   space 1.122 identical 4/4 refit 3.00/3
+M 1024  segs 119803 bytes 4755968  space 6.311 identical 4/4 refit 2.75/3
+M 4096  segs 67065  bytes 1785584  space 2.369 identical 4/4 refit 2.50/3
+M 16384 segs 55822  bytes 1069808  space 1.420 identical 4/4 refit 4.00/5
+ALEX 10M prefix keys 8842742 probes 20 payload_retained 20 max_key_exposed 0
+
+=== fb full 200000000 ===
+shi_segs 2255847 shi_bytes 38604336 pgm_segs 2120485 pgm_bytes 35019496
+btree_bytes 154772752 btree_height 6
+pgm_ns 289.481 shi_ns 525.317 shi_over_pgm 1.815 btree_ns 624.025 btree_over_pgm 2.156
+M 0     segs 2228559 bytes 36900608 space 1.054 identical 4/4 refit 3.00/4
+M 1024  segs 2337829 bytes 44050336 space 1.258 identical 4/4 refit 2.75/4
+M 4096  segs 2255847 bytes 38604336 space 1.102 identical 4/4 refit 2.25/3
+M 16384 segs 2235335 bytes 37508176 space 1.071 identical 4/4 refit 2.25/3
+ALEX 10M prefix keys 10000000 probes 20 payload_retained 20 max_key_exposed 0
+
+=== books full 199999999 ===
+shi_segs 837007 shi_bytes 14950784 pgm_segs 729231 pgm_bytes 11703112
+btree_bytes 154844992 btree_height 6
+pgm_ns 256.703 shi_ns 412.090 shi_over_pgm 1.605 btree_ns 624.572 btree_over_pgm 2.433
+M 0     segs 808094 bytes 12981504 space 1.109 identical 4/4 refit 3.75/6
+M 1024  segs 927813 bytes 21089344 space 1.802 identical 4/4 refit 2.25/3
+M 4096  segs 837007 bytes 14950784 space 1.278 identical 4/4 refit 3.50/6
+M 16384 segs 815289 bytes 13452720 space 1.150 identical 4/4 refit 3.25/5
+ALEX 10M prefix keys 10000000 probes 20 payload_retained 20 max_key_exposed 0

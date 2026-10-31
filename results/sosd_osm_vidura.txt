@@ -1,0 +1,8 @@
+host: dell-R760, Intel Xeon Gold 6430, GCC 13.3.0 -O3, one thread
+file: osm_cellids_800M_uint64 (Zenodo 15240501), 6400000008 bytes, count header 800000000
+
+keys 800000000 unique_span 13715305040184608256
+shi_segments 6690022 shi_levels 4 shi_model_bytes 118340528 pgm_segments 6175387 pgm_model_bytes 101452168
+shi_build_ms 108215 pgm_build_ms 28909.3 lookup_misses 0 lookup_audited 800000000
+deletes 4 byte_identical 4 refit_mean 2.25 refit_max 3 e2e_delete_us 354379 model_only_us 137773 rebuild_us 3.3019e+07 e2e_speedup 93.1745
+pgm_dynamic_probes 4 pgm_tombstones_found 4 pgm_bytes_per_delete 16
