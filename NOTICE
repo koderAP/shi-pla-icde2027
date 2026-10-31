@@ -4,6 +4,5 @@ This artifact vendors snapshots of:
 - ALEX (MIT, Microsoft), third_party/ALEX
 - LIPP (MIT), third_party/lipp
 
+Only the headers needed to build the paper binaries are included.
 SOSD binary key files are not redistributed. They are Zenodo record 15240501.
-The IEEE LaTeX template under IEEE-conference-template-062824 is IEEE's
-conference template and is included so the paper source compiles.

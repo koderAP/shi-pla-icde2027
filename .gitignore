@@ -29,6 +29,9 @@ paper/comment.cut
 forgetful_index/
 proposal.md
 results/novelty_critique.md
+IEEE-conference-template-062824/
+pg_shi_index/
+paper/ieee.bbl
 
 # Nested clones of vendored trees must not become gitlinks.
 third_party/**/.git

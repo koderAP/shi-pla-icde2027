@@ -21,8 +21,6 @@ This repository is the supplemental URL for CMT. It contains the code, paper sou
    - `osm_cellids_800M_uint64` (800,000,000)
 4. About 32 GiB RAM for wiki/fb/books and about 64 GiB plus a 4n virtual reservation for osm. The numbers in the paper were taken on a Dell PowerEdge R760, Xeon Gold 6430, 251 GiB, GCC 13.3.
 
-PostgreSQL is optional. The paper's live-engine claim is an in-process audit, not a WAL-backed access method.
-
 ## Layout
 
 | Path | Role |
@@ -55,7 +53,7 @@ g++ -std=c++17 -O3 -march=native -Wno-pragmas \
   -o build/bench_probe src/bench_probe.cpp
 ```
 
-Paper PDF (optional):
+Paper PDF (optional, needs a TeX live with IEEEtran):
 
 ```bash
 make -C paper
