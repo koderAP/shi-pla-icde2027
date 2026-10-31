@@ -1,7 +1,7 @@
 # Artifact: Do Learned Index Models Remember What You Deleted?
 
 ICDE 2027 research-track artifact for the paper
-*Do Learned Index Models Remember What You Deleted? Strong History Independence for Piecewise-Linear Models*.
+*Do Learned Index Models Remember What You Deleted? Strong History Independence of the Serialized Model*.
 
 - Author: Anubhav Pandey, CSE, IIT Delhi
 - Email: cs5221136@iitd.ac.in

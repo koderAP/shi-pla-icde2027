@@ -14,7 +14,7 @@
 
 \begin{document}
 
-\title{Do Learned Index Models Remember What You Deleted? Strong History Independence for Piecewise-Linear Models}
+\title{Do Learned Index Models Remember What You Deleted? Strong History Independence of the Serialized Model}
 
 \author{\IEEEauthorblockN{Anubhav Pandey}
 \IEEEauthorblockA{\textit{Department of Computer Science and Engineering}\\
@@ -27,41 +27,26 @@ ORCID: 0009-0006-9755-5871}}
 
 \begin{abstract}
 Dynamic learned indexes delete a key by leaving a tombstone or a gap, and a later reader of that structure can recover the key.
-We take the serialized model to be strongly history independent when those bytes depend only on the keys that remain. The key arena is outside that record.
-On the full SOSD files, shipped dynamic PGM still stores a 16-byte tombstone after hundreds of later deletes.
-ALEX clears an existence bit and leaves the key in the payload.
-Writing zeros into that slot removes the raw key and leaves the gapped layout, and the LIPP sources we build against have no erase.
-The model here is piecewise linear, with a segment-local intercept and a relative count.
-A local splice stops at the next old start key.
-An anchor is the cap when no old start key comes back, which is why the squared keys need one.
-Packing the survivors and fitting a static PGM already meets that byte condition for one checkpoint.
-The splice is the live model a reader of Repr sees before that checkpoint.
-Local deletion matches a fresh build on 4,000 fuzzer checks, on 100 deletes of each SOSD file, on 8 packed-binary deletes of each file, and after a 32-delete batch and a 20,000-operation mix on each of those files.
-Mean delete time without the slide is 0.67 ms, 2.20 ms, 1.47 ms, and 7.61 ms. The slowest of those 512 deletes finishes 813, 125, 324, and 156 times sooner than a separate static PGM build. Against the means, one of those builds matches about 3,449, 3,450, 4,191, and 3,797 deletes.
-Lookup on a fresh arena is 390 to 743 ns, or 1.68 to 2.00 times static PGM. The model is 1.10 to 1.28 times static PGM on fb, books, and osm, 2.37 times on wiki at modulus 4096, 1.12 times there at modulus 0, and 6.31 times at modulus 1024.
-A separate slide keeps lookup 420 to 770 ns through 4,096 deletes. After a million in-place deletes that slide left 414 to 532 boundaries and lookup 511 to 918 ns.
-A million in-place deletes with that slide averaged 4.44 ms, 10.9 ms, 10.4 ms, and 47.2 ms. One of those static PGM builds matches about 518, 693, 592, and 613 of those deletes.
-When the surviving keys are known, a rebuild names the deleted key for every exact structure we tried.
-Without that knowledge this index's window on the 200,000-key generators is 4.0 to 68.4 percent.
-The 3.1 percent figure is static PGM on the squared keys.
-Both rates mostly count how many of the 999 decoys fall in the named interval, against a 0.1 percent draw.
+On the full SOSD files, shipped dynamic PGM still stores a 16-byte tombstone after hundreds of later deletes, ALEX leaves the key in the payload after clearing an existence bit, and the LIPP sources we build against have no erase.
+We take the serialized model Repr, the segment tables, error bound, modulus, and segmenter identity, to be strongly history independent when those bytes depend only on the keys that remain. The key arena and the anchor secret are outside that record. Packing the survivors and fitting a static PGM already meets that byte condition for one checkpoint. The splice is the live model a reader of Repr sees before that checkpoint.
+A local splice that stops at the next old start key matches a fresh build on 4,000 fuzzer checks, on 100 deletes of each SOSD file, and after a 32-delete batch and a 20,000-operation mix. Mean delete time without the slide is 0.67 ms, 2.20 ms, 1.47 ms, and 7.61 ms on wiki, fb, books, and osm. The slowest of 512 deletes finishes 813, 125, 325, and 156 times sooner than a separate static PGM build. At modulus 4096, lookup on a fresh arena is 390 to 743 ns, or 1.68 to 2.00 times static PGM, and the model is 1.10 to 1.28 times static PGM except 2.37 times on wiki.
+When the surviving keys are known, a rebuild names the deleted key for every exact structure we tried. Without that knowledge this index's window on the 200,000-key generators is 4.0 to 68.4 percent, localization among 999 decoys against a 0.1 percent draw. The 3.1 percent figure is static PGM on the squared keys.
 \end{abstract}
 
 \begin{IEEEkeywords}
-learned indexes, history independence, deletion, piecewise-linear approximation, SOSD
+learned indexes, history independence, indexing, data deletion, piecewise-linear approximation
 \end{IEEEkeywords}
 
 \section{Introduction}
 
 A learned index replaces routing nodes with a model of the empirical CDF~\cite{kraska2018,ferragina2020pgm}.
-Dynamic variants stay updatable by recording a tombstone, opening a gap, or leaving the fitted model in place, and they return quickly while a forensic reader can still see the deleted key~\cite{ferragina2020pgm,ding2020alex,wu2021lipp}.
-The cost of sanitizing deleted records in database engines is already documented~\cite{shastri2020}.
-Storage-layer tools sanitize LSM trees and row pages~\cite{sarkar2023lethe,wagner2024dbsanitizer}, and history-independent B-trees already exist~\cite{bender2016}.
-The model inside a learned index is a separate artifact: a segment start key is often a raw key, and a tombstone is a stored record.
+Dynamic variants stay updatable by recording a tombstone, opening a gap, or leaving the fitted model in place, and a later reader of that structure can still recover the deleted key~\cite{ferragina2020pgm,ding2020alex,wu2021lipp}.
+This paper is about the serialized model, not about whether a storage sanitizer already rewrote the key array~\cite{shastri2020,sarkar2023lethe,wagner2024dbsanitizer}.
+A segment start key is often a raw key, and a tombstone is a stored record.
 A segment that stores its intercept in the global rank space cannot be left alone after a delete.
 Three segments with relative counts $(4,3,5)$ become $(3,3,5)$ when a key in the first segment is removed, and the stored suffix is untouched.
 The same segments stored as global intercepts $(0,4,7)$ become $(0,3,6)$: both later fields move, and a local splice cannot match a rebuild.
-A history-independent B-tree does not have that coupling.
+A history-independent B-tree does not have that coupling~\cite{bender2016}.
 A frequency tree that keeps two copies is fitting node depth to a frequency prediction, not segmenting a CDF.
 The model here stores a count and a segment-local intercept so the suffix can stay.
 Fig.~\ref{fig:attack} draws that contrast on one deleted key.
@@ -118,7 +103,7 @@ Fig.~\ref{fig:attack} draws that contrast on one deleted key.
   \node[anchor=north, align=center, text width=46mm] at (97,-7.6)
     {existence bit cleared\\[0.4mm]the payload is not cleared};
   \node[anchor=north, align=center, text width=46mm] at (154,-7.6)
-    {white suffix is copied\\[0.4mm]those bytes match a rebuild};
+    {white suffix of Repr is copied\\[0.4mm]the arena is not in that record};
 \end{tikzpicture}
 
 \caption{One deleted key, drawn as the three segments in the introduction.
@@ -126,8 +111,8 @@ Fig.~\ref{fig:attack} draws that contrast on one deleted key.
 The tombstone still stores 42, and the base level still holds it.
 (b) ALEX clears an existence bit and leaves 42 in the payload.
 (c) Relative counts $(4,3,5)$ become $(3,3,5)$.
-The splice stops at the next old start, the white suffix is copied, and those bytes match a rebuild.
-The key arena is not in that record.}
+The splice stops at the next old start, the white suffix of the segment table is copied, and those Repr bytes match a rebuild.
+The key arena is not in Repr.}
 \label{fig:attack}
 \end{figure*}
 
@@ -149,10 +134,10 @@ That work fits node depth to a frequency prediction, on a static workload, and i
 
 The contributions are:
 \begin{enumerate}
-\item A single-snapshot account of stock dynamic PGM and ALEX, plus the observation that the LIPP sources used here provide no erase, while the published LIPP design keeps an empty slot.
-\item A relative-count piecewise-linear index whose splice stops at the next old start key and matches a rebuild. Anchors cap the family that never reuses a start key. The stored intercept is the predicted local rank at the segment origin, and at $\varepsilon=16$ the 16-bit range does not end a segment. A segment also ends at the count cap of 65{,}535, at an anchor, or when the $\varepsilon$-hull rejects the next key.
-\item End-to-end delete, lookup, space, and anchor measurements on the SOSD wiki, fb, books, and osm files. The delete timer includes the move inside one anchor piece, the local re-fit, and the boundary-list rebuild.
-\item A two-snapshot measurement. Known-survivor rebuild identification is $100\%$ for this index, static PGM, and the hash-promotion tree. The window column of Table~\ref{tab:t2} is localization among 999 decoys, not hiding.
+\item A single-snapshot account of stock dynamic PGM and ALEX on generators and on the full SOSD files.
+\item A relative-count piecewise-linear splice of $\mathrm{Repr}$ that stops at the next old start key and matches a rebuild before the next packed-key static-PGM checkpoint.
+\item Lookup, space, and delete cost of that live model against static PGM on wiki, fb, books, and osm.
+\item A two-snapshot measurement: known-survivor rebuild identification is $100\%$ for every exact structure we tried, and Table~\ref{tab:t2} is localization among decoys, not hiding.
 \end{enumerate}
 
 \section{Related work}
@@ -203,7 +188,7 @@ ALEX's retained payload is inside the structure erase returns.
 Strong history independence here is a live-model byte invariant on $\mathrm{Repr}$.
 A checkpoint that discards the live model and fits a static PGM on the packed keys already meets that invariant for the durable record.
 The splice is the live model before that checkpoint.
-The one-snapshot object this paper names is a reader of the \texttt{SHI2} checkpoint: $\mathrm{Repr}$ and then the live keys packed in rank order.
+A reader of one snapshot may hold only $\mathrm{Repr}$, or $\mathrm{Repr}$ followed by the live keys packed in rank order. Holes in the process arena are outside both.
 Logs, the buffer pool, and freed pages are outside both, including after a storage-layer wipe~\cite{sarkar2023lethe,wagner2024dbsanitizer}.
 
 Let $S(\mathrm{Ops})$ be the key set produced by an update sequence.
@@ -283,7 +268,7 @@ Zeroing every payload slot equal to the deleted key then left that key in neithe
 That write removes the raw key and leaves the gapped shifts and the fitted model.
 On the generators, the same Shift column is the structural leak a payload write leaves behind.
 The library's own erase does not zero the slot.
-One million point queries drawn from those files, timed against static PGM in the same process, took 78.8\,ns, 604\,ns, 149\,ns, and 891\,ns, against paired PGM times of 224\,ns, 293\,ns, 260\,ns, and 441\,ns, so ALEX was $0.35\times$, $2.06\times$, $0.57\times$, and $2.02\times$ PGM.
+One million point queries drawn from those files, timed against static PGM in the same process, took 79\,ns, 604\,ns, 149\,ns, and 891\,ns, against paired PGM times of 224\,ns, 293\,ns, 260\,ns, and 441\,ns, so ALEX was $0.35\times$, $2.06\times$, $0.57\times$, and $2.02\times$ PGM.
 None of those queries missed.
 ALEX is faster than PGM on wiki and books, and about twice PGM on fb and osm.
 The payload is still there after erase.
@@ -303,25 +288,24 @@ PGM uses 1{,}000 deletes.
 ALEX uses 250.
 Tombstone is a key still stored in the data levels.
 Rank is the stale model landing on the deleted position.
-Window is the stale-PGM expected top-1.
+Window is the stale-PGM expected top-1 among 1{,}000 candidates, chance $0.1\%$.
 Start is stale-PGM segment-start exposure.
 ALEX is a payload still stored.
 Shift is the ALEX bulk-load window.
-SHI is byte identity of the segment table with a rebuild, not a recovery rate, and it is not scored against a tombstone.
-Chance for a window draw is $0.1\%$.}
+This table is stock indexes. Byte identity of this paper's segment table is a separate check.}
 \label{tab:t1}
 \centering
 \scriptsize
-\begin{tabular}{@{}lrrrrrrr@{}}
+\begin{tabular}{@{}lrrrrrr@{}}
 \toprule
-Set & Tomb. & Rank & Window & Start & ALEX & Shift & SHI \\
+Set & Tomb. & Rank & Window & Start & ALEX & Shift \\
 \midrule
-books  & 100\% & 0.8\% & 14.3\% & 0 & 87.2\% & 98.0\% & 100\% \\
-fb     & 100\% & 2.7\% & 81.6\% & 1.7\% & 88.0\% & 98.8\% & 100\% \\
-osm    & 100\% & 0.9\% & 49.4\% & 0.2\% & 96.4\% & 75.4\% & 100\% \\
-wiki   & 100\% & 1.4\% & 25.6\% & 0.2\% & 98.0\% & 72.3\% & 100\% \\
+wiki   & 100\% & 1.4\% & 25.6\% & 0.2\% & 98.0\% & 72.3\% \\
+fb     & 100\% & 2.7\% & 81.6\% & 1.7\% & 88.0\% & 98.8\% \\
+books  & 100\% & 0.8\% & 14.3\% & 0 & 87.2\% & 98.0\% \\
+osm    & 100\% & 0.9\% & 49.4\% & 0.2\% & 96.4\% & 75.4\% \\
 \addlinespace
-$i^{2}$ & 100\% & 100\% & 100\%  & 0 & 100\%  & 30.5\% & 100\% \\
+$i^{2}$ & 100\% & 100\% & 100\%  & 0 & 100\%  & 30.5\% \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -480,15 +464,15 @@ The restart at $s-1$ is required because the edited key may have been what stopp
 The stop rule copies the suffix only when that next origin is an old start.
 A count-cap split or an appearing anchor is the same test: they change where the next origin is.
 
-\emph{Theorem.}
-Fix $\varepsilon$, $M$, the secret, and a streaming segmenter that starts each segment at the cursor and whose fields depend only on the keys from that cursor, $\varepsilon$, and the anchor predicate.
-The invariant is this.
+\textbf{Theorem 1.}
+Fix $\varepsilon$, $M$, and a streaming segmenter that starts each segment at the cursor and whose fields depend only on the keys from that cursor, $\varepsilon$, the 65{,}535-key cap, and the anchor predicate.
+The secret is not in $\mathrm{Repr}$. Prefix sums are a cache and are not serialized.
 The cursor emits a new segment only from a key the edit has not passed.
 It copies the stored suffix only when that key equals an old start key.
 A level that is empty, or no longer shorter than the keys it models, is replaced by the same \texttt{Build} the constructor uses.
 Under that invariant, Algorithm~\ref{alg:refit} emits the same segment sequence as \texttt{Build} on the updated array, so $\mathrm{Repr}$ is strongly history independent for one binary.
 
-\emph{Proof.}
+\textbf{Proof.}
 The proof has four parts.
 
 \emph{Canonicity.}
@@ -674,7 +658,7 @@ Table~\ref{tab:dist} replaces them.
 The keys are cut on the anchors, the upper models are spliced instead of rebuilt, and a rank change is added to later prefix blocks.
 
 A packed-memory array would give a logarithmic move with density thresholds~\cite{bender2016}.
-We cut the array at the anchors the model already uses, so Table~\ref{tab:modtime} times a linear piece move: 24.7\,ms to 225\,ms at $M=0$, and 2.4\,$\mu$s to 4.0\,$\mu$s at $M=4096$.
+We cut the array at the anchors the model already uses, so Table~\ref{tab:modtime} times a linear piece move: 24.2\,ms to 215\,ms at $M=0$, and 2.3\,$\mu$s to 3.8\,$\mu$s at $M=4096$.
 This paper does not implement that PMA.
 The hash-promotion tree used in the fuzzer is history independent because every level is a function of the key set, and its insert and erase rebuild those levels.
 It is a second exact object for the byte check.
@@ -691,7 +675,9 @@ The 200{,}000-key rows and one fuzzer run used Apple Silicon and Apple Clang at 
 The SOSD rows, the lookup rows, the anchor sweep, and the second fuzzer run used a Dell R760 with an Intel Xeon Gold 6430, 64 threads, 251\,GB of RAM, GCC 13.3 at \texttt{-O3}, one thread.
 That host was shared, so absolute times are a loaded-server measurement.
 Lookup ratios and the byte comparisons ran in one process.
-The static PGM column of Table~\ref{tab:build} is a separate run on the same files, and the 813, 125, 324, and 156 figures divide that run by the slowest deletes in Table~\ref{tab:dist}.
+The static PGM column of Table~\ref{tab:build} is a separate run on the same files, and the 813, 125, 325, and 156 figures divide that run by the slowest deletes in Table~\ref{tab:dist}.
+The Mean/Max $\times$ column of Table~\ref{tab:dist} divides the same-run rebuild of this index, not that static PGM column.
+The timed \texttt{erase} is the piece move, the local fit, and the boundary-list rebuild. The copy and the leaf start-key array are taken before the clock. The run slide is off in that table. Dynamic PGM and ALEX erase are not timed, because those calls retain the key. A packed-memory array was not implemented.
 
 Unless a table says otherwise, $\varepsilon=16$, the recursive error is $4$, the anchor modulus is $4096$, the segmenter is the optimal hull, and the anchor secret is fixed.
 SOSD binaries are the Zenodo release 15240501.
@@ -760,7 +746,7 @@ Mean\,/\,max divides the rebuild in the row by the mean and by the maximum in th
 \toprule
 File & Mean & Std & P50 & P99 & Max & Rebuild & Mean\,/\,Max\,$\times$ \\
 \midrule
-wiki  & 0.67\,ms & 0.40 & 0.53 & 2.46 & 2.83 & 3.98\,s & 5{,}940\,/\,1{,}407 \\
+wiki  & 0.67\,ms & 0.40 & 0.53 & 2.46 & 2.83 & 3.98\,s & 5{,}940\,/\,1{,}406 \\
 fb    & 2.20\,ms & 6.18 & 1.33 & 31.8 & 60.7 & 27.7\,s & 12{,}591\,/\,456 \\
 books & 1.47\,ms & 2.75 & 1.36 & 18.7 & 18.9 & 14.7\,s & 10{,}000\,/\,778 \\
 osm   & 7.61\,ms & 19.5 & 1.14 & 99.1 & 185 & 101\,s & 13{,}272\,/\,546 \\
@@ -784,12 +770,12 @@ The piece move is a few microseconds in both clusters at this modulus, which the
 On osm the median is 1.14\,ms and the mean is 7.61\,ms, so more than half of the draws are in the fast cluster and the mean is the slow one.
 On books the median, 1.36\,ms, sits close to the mean, 1.47\,ms.
 On wiki the 99th percentile is 2.46\,ms and the maximum is 2.83\,ms, against the 3.98\,s build in that run.
-The slowest delete finishes $1{,}407\times$, $456\times$, $778\times$, and $546\times$ sooner than a fresh build of the arena index in the same run, whose times are the ``This index'' column of Table~\ref{tab:build}.
+The slowest delete finishes $1{,}406\times$, $456\times$, $778\times$, and $546\times$ sooner than a fresh build of the arena index in the same run, whose times are the ``This index'' column of Table~\ref{tab:build}.
 On an earlier binary, a batch of 32 deletes on one copy took 0.47\,ms, 2.80\,ms, 1.57\,ms, and 25.7\,ms per delete and matched a fresh build of the survivors on all four files.
 That batch is one sequence of 32 erases, not 32 copies of the single-delete tail.
 The final model of the 20{,}000-operation mix matched a fresh build on all four files as well.
 The 100 single-delete checks are a separate comparison.
-The mean rate is about 1{,}500 deletes per second on wiki, 455 on fb, 680 on books, and 130 on osm.
+The mean rate is about 1{,}500 deletes per second on wiki, 455 on fb, 680 on books, and 131 on osm.
 
 \subsection{Space and lookup}
 
@@ -797,7 +783,8 @@ The mean rate is about 1{,}500 deletes per second on wiki, 455 on fb, 680 on boo
 \caption{Model size on the SOSD files at $\varepsilon=16$ and $M=4096$.
 Both sizes include upper levels.
 The segment counts are the leaf level.
-Levels counts this index only.}
+Levels counts this index only.
+Wiki is $1{,}785{,}584/753{,}576=2.37\times$; the megabyte cells are rounded.}
 \label{tab:space}
 \centering
 \footnotesize
@@ -826,7 +813,7 @@ The four named levels are $47{,}092$ segments, $753{,}472$ bytes.
 The remaining $104$ bytes are four sentinel segments and the level-offset array.
 At $M=4096$, fb, books, and osm are between $1.10\times$ and $1.28\times$ static PGM, and wiki is $2.37\times$.
 That $2.37\times$ is $1{,}785{,}584/753{,}576$.
-The table's $1.79$\,MB and $0.75$\,MB are those counts rounded, and $1.79/0.75$ is $2.39$.
+The table's megabyte cells are rounded; the $2.37\times$ figure uses the exact bytes in the caption of Table~\ref{tab:space}.
 Table~\ref{tab:anchor} shows that the wiki overrun is the anchor density: with $M=0$ the same file is $1.12\times$.
 Those sizes keep upper-level anchors on.
 Turning that rule off leaves the leaf anchors and the piece cuts, and the upper levels are an ordinary recursive fit.
@@ -1100,10 +1087,7 @@ osm   & 959 & 1.17 & 12.8\,ms & 39.7\,ms & 26.0\,/\,35.4\,ms \\
 
 \subsection{Limits of the measurement}
 
-The PostgreSQL functions that call the same core are an in-process audit.
-They have no write-ahead log, buffer pool, or latch protocol.
-A log record that kept the byte condition would be the spliced segments after the call.
-A log line that names the deleted key would put the key back into durable storage, and these functions write neither.
+There is no WAL, buffer pool, or latch protocol. A log line that names the deleted key would put the key back into durable storage.
 Anchor pieces have no density thresholds, so a gap between anchors is still moved linearly.
 The exhaustive rank audit missed none of the 1{,}290{,}437{,}010 keys of the fresh arena, and after one middle-key delete it missed none of the 1{,}290{,}437{,}006 survivors.
 After 1{,}024 uniform deletes it missed none of 90{,}435{,}987, 199{,}998{,}976, 199{,}998{,}975, and 799{,}998{,}976 survivors.
@@ -1123,8 +1107,8 @@ A deterministic build is a function of the current keys, so replacing the live m
 The question is what a reader of the live model sees before that replacement.
 Waiting for the next checkpoint leaves the deleted key in the published model until the rebuild is installed.
 On the host in Section~\ref{sec:eval} that rebuild takes 2.30\,s, 7.58\,s, 6.14\,s, and 28.9\,s for wiki, fb, books, and osm.
-Dividing those separate builds by the slowest delete in Table~\ref{tab:dist} gives $813\times$, $125\times$, $324\times$, and $156\times$.
-Dividing them by the mean delete without the slide, one rebuild costs about as much as 3{,}449 wiki deletes, 3{,}450 fb deletes, 4{,}191 books deletes, and 3{,}797 osm deletes.
+Dividing those separate builds by the slowest delete in Table~\ref{tab:dist} gives $813\times$, $125\times$, $325\times$, and $156\times$.
+Dividing them by the mean delete without the slide, one rebuild costs about as much as 3{,}433 wiki deletes, 3{,}445 fb deletes, 4{,}177 books deletes, and 3{,}798 osm deletes.
 A purge larger than that is less work as one rebuild.
 The 32-delete batch does not reach that count: on osm it is 25.7\,ms a delete in that earlier binary, and 32 of them are still far under the 28.9\,s rebuild.
 A rebuild on every delete makes the wait those full fits, and it reads every surviving key to do it.
@@ -1158,7 +1142,7 @@ osm   & 217\,ms & 15.1\,ms & 5.34\,ms & 2.40\,ms \\
 \end{table}
 
 A million in-place deletes, uniform among the keys still present and with the slide, are Table~\ref{tab:million}.
-The counts of 3{,}449, 3{,}450, 4{,}191, and 3{,}797 above leave the slide out.
+The counts of 3{,}433, 3{,}445, 4{,}177, and 3{,}798 above leave the slide out.
 All four runs cleared the vacated tail, matched a fresh build, and missed no lookup.
 Scans of 89{,}437{,}011, 199{,}000{,}000, 198{,}999{,}999, and 799{,}000{,}000 survivors missed none.
 
@@ -1167,7 +1151,7 @@ Scans of 89{,}437{,}011, 199{,}000{,}000, 198{,}999{,}999, and 799{,}000{,}000 s
 Lookup is one million probes after the run.
 Audit is a scan of every survivor.
 The boundary list is the length at the end of the run.
-Dividing the static PGM builds of 2.30\,s, 7.58\,s, 6.14\,s, and 28.9\,s by these means gives about 518, 693, 592, and 613.}
+Dividing the static PGM builds of 2.30\,s, 7.58\,s, 6.14\,s, and 28.9\,s by these means gives about 518, 695, 590, and 612.}
 \label{tab:million}
 \centering
 \scriptsize
@@ -1185,21 +1169,9 @@ osm   & 47.2\,ms & 249 & 532 & 918\,ns \\
 
 \section{Conclusion}
 
-Shipped dynamic PGM retains a deleted key because erase inserts a tombstone, 16 bytes that a size measurement sees and a level scan finds, on generators and on all four SOSD files we ran.
-ALEX erase retains payloads, on generators and on 20 of 20 erases of each full SOSD file.
-The paired ALEX and static-PGM lookup times are the ones reported with that full-file check.
-Zeroing those payload slots removes the raw key and leaves the gapped layout, and that zeroing is not the erase the library ships.
-The LIPP design keeps an empty slot, and the sources used here have no erase.
-A piecewise-linear model with relative counts can be rebuilt locally so that one snapshot is the model of the keys that remain.
-The splice stops at the next old start key.
-The greedy cone in the fuzzer stores intercept 0.
-The optimal hull on the SOSD files uses the segment-local intercept in the design section, and at $\varepsilon=16$ that range does not end a segment on these files.
-Mean delete time, without the boundary slide, is 0.67\,ms, 2.20\,ms, 1.47\,ms, and 7.61\,ms, and the slowest of 512 trials finishes $813\times$, $125\times$, $324\times$, and $156\times$ sooner than a separate static PGM build of the same keys on that shared host.
-A separate delete-only slide keeps lookup 420 to 770\,ns through 4{,}096 deletes.
-With that slide, a million in-place deletes averaged 4.44\,ms, 10.9\,ms, 10.4\,ms, and 47.2\,ms, with lookup 511 to 918\,ns (Table~\ref{tab:million}).
-When the survivors are known, a rebuild names the deleted key for every exact structure we tried.
-Without that knowledge this index's window on the 200{,}000-key generators is 4.0--68.4\%.
-The $3.1\%$ figure is static PGM on the squared keys.
+Shipped dynamic PGM and ALEX still store a deleted key in the structure erase returns, on generators and on the full SOSD files.
+A relative-count splice can make the serialized model match a rebuild before the next packed-key static-PGM checkpoint, and on these files that call finishes sooner than a separate static PGM build.
+Two snapshots still name the deleted key for every exact structure we tried.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
